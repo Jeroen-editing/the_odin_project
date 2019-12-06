@@ -1,0 +1,33 @@
+#borderbox {
+    height: 400px;
+    width: 400Px;
+    margin: 100px 0 0 100px;
+    border: 4px solid darkcyan;
+    border-radius: 110px 12px 44px 24px;
+    /*background-color: darkseagreen;*/ 
+    background: linear-gradient(to bottom left, rgb(255, 174, 0), rgb(255, 136, 0), red);
+    box-shadow: inset 5px 5px 10px rgb(61, 59, 59);
+
+}
+#insidebox {
+    height: 200px;
+    width: 200Px;
+    margin: 30px 0 0 40px;
+    border: 4px solid rgb(156, 148, 148);
+    border-radius: 180px/120px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: url(backgroundDark-05.jpg);
+    background-repeat: no-repeat;
+    background-position-x: -160px;
+    background-position-y: -10px;
+    background-size: 200%;
+    box-shadow: 5px 5px 10px rgb(61, 59, 59);
+}
+
+#genus_examples > li { 
+    border: 1px solid red 
+}
+
+h2 + p { font-weight: bold }
+

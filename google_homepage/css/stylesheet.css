@@ -1,0 +1,75 @@
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: Dosis; }
+
+.toppage {
+  max-width: 1280px; }
+  .toppage .toolbar {
+    display: block;
+    min-width: 1280px;
+    margin-top: -10px;
+    padding: 5px 0 5px 30px;
+    background-color: #664204;
+    height: 48px;
+    border-bottom: 5px solid #3B1D02; }
+    .toppage .toolbar .toplist {
+      margin-top: 5px;
+      float: left; }
+    .toppage .toolbar .navlist {
+      list-style: none;
+      display: inline-block;
+      padding: 12px 14px 0 14px;
+      margin-top: 7px;
+      background-color: cadetblue;
+      text-align: center;
+      height: 29px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      box-shadow: 2px 1px 4px black; }
+      .toppage .toolbar .navlist:hover {
+        background-color: darkgreen; }
+      .toppage .toolbar .navlist .navlink {
+        color: white;
+        letter-spacing: 3px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: silver;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 1px black; }
+
+#homelist {
+  margin-left: 8px;
+  margin-right: 755px; }
+
+#techlist {
+  margin-left: -36px; }
+
+#yourlist {
+  padding: 7px 8px 5px 8px; }
+
+#you {
+  margin-top: 2px; }
+
+#themain {
+  margin-top: -80px;
+  padding-right: 30px;
+  background-image: url("../assets/img/journey-1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1280px;
+  min-height: 960px; }
+
+.mainpage {
+  display: block; }
+  .mainpage .title {
+    color: silver;
+    text-align: center;
+    font-size: 120px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-shadow: 1px 1px 1px black;
+    padding-top: 290px;
+    margin-left: 20px; }
+
+/*# sourceMappingURL=stylesheet.css.map */
