@@ -7,21 +7,23 @@
 <body>
 
     <script>
-
+        // statements and functions in 1 big function
         function game() {
 
             let playerPoints = 0;
             let pcPoints = 0;
 
+            // see if player or pc has less then 5 points, 'while' does execute at least one time (so < 5 and not <= 5)
             while (pcPoints < 5 && playerPoints < 5) {
 
+                // variables shouldn't be global if not needed, still need to fix that
                 let choices = ['Rock', 'Paper', 'Scissors'];
                 let makeChoice = '';
                 let selection = '';
                 let playerSelection;
                 let computerSelection;
 
-
+                // PC random choice
                 function computersPlay() {
 
                     function getRandomInt(max) {
@@ -31,6 +33,7 @@
                     return choices[getRandomInt(3)];
                 }
 
+                // players choice (input with prompt()) & and adding different spelling styles
                 function playersPlay() {
 
                     makeChoice = prompt('Make your choice: Rock, Paper, Scissors');
@@ -45,6 +48,7 @@
                     return selection;
                 }
 
+                // play the first round (and repeating it)
                 function playRound() {
 
                     computerSelection = computersPlay();
@@ -77,11 +81,13 @@
                     return playerPoints + pcPoints;
                 }
 
+                // showing score and separating different rounds
                 playRound();
                 console.log('Score: ' + playerPoints + ' - ' + pcPoints);
                 console.log('- - - - - - - - - - - - - - -')
             }
 
+            // check the winner
             if (pcPoints > playerPoints) {
                 console.log('%c The PC wins the game!', 'font-size: 40px; color: red; border; 2px solid darkslategray');
                 console.log('The game will restart in 5 sec.');
@@ -90,7 +96,10 @@
                 console.log('The game will restart in 5 sec.');
             }
         }
+        // calling the actual function
         game();
+
+        // reload function (restart the game) after 5 sec.
         let goAgain = function again() {
             self.location.replace(window.location);
         };
