@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        p {
+            padding: 8px 10px;
+            max-width: 132px;
+            border: 2px solid darkslategray;
+            border-radius: 4px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="output">
+
+        </div>
+    </section>
+
+    <script>
+
+            let output = document.querySelector('.output');
+            output.innerHTML = '';
+            
+            let i = 10;
+            
+            while(i >= 0) {
+
+                let para = document.createElement('p');
+
+                if (i === 10) {
+
+                    para.textContent = 'Countdown : ' + i;
+                
+                } else if (i === 0) {
+
+                    para.textContent = "Blast off !";
+
+                } else {
+
+                    para.textContent = i;
+
+                }
+
+                output.appendChild(para);
+
+                i--;
+            }
+
+    </script>
+    
+</body>
+</html>

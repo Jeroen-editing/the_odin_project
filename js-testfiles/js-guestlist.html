@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        p {
+            padding: 8px 10px;
+            max-width: 132px;
+            border: 2px solid darkslategray;
+            border-radius: 4px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="admitted">
+
+        </div>
+        <div class="refused">
+
+        </div>
+    </section>
+
+    <script>;
+
+        let people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Bob', 
+                        'Lola', 'Sam', 'Kay', 'Bruce', 'Kate', 'Lucy'];
+        
+        let admitted = document.querySelector('.admitted');
+        let refused = document.querySelector('.refused');
+
+        admitted.textContent = 'Admit: ';
+        refused.textContent = 'Refuse: ';
+        let i = 0;
+        
+        do { 
+
+            if (people[i] == "Phil" || people[i] == "Lola" || people[i] == "Sam" || people[i] == "Bob") {
+                
+                refused.textContent += people[i] + ', ';
+
+            } else {
+
+                admitted.textContent += people[i] + ', ';
+
+            }
+            i++
+
+        } while (i < people.length)
+    
+        refused.textContent = 
+            refused.textContent.slice(0, refused.textContent.length - 2) + ',';
+        admitted.textContent = 
+            admitted.textContent.slice(0, admitted.textContent.length - 2) + ',';
+    
+    </script>
+
+
+
+</body>
+</html>
