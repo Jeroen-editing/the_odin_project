@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        const removeFromArray = function(...Args) {
+
+            let list = Args[0];
+            let newList = [];
+
+            list.forEach((item) => {
+
+                if (!Args.includes(item)) {
+
+                    newList.push(item);
+
+                }
+            });
+            return newList;
+        };
+
+        console.log(removeFromArray(["hey",2,3,"ho"],"hey",3));
+
+    </script>
+
+</body>
+</html>
