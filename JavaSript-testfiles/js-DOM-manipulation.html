@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>
+        THE TITLE OF YOUR WEBPAGE
+    </h1>
+
+    <div id="container"></div>
+
+    <button onclick="alert('Hello World')">Click Me</button>
+    <button id="btn1">Click Me</button>
+    <button id="btn2">Click Me Too</button>
+
+    <button onclick="alertFunction()">CLICK ME BABY</button>
+    <button id='btn5'>CLICK ME hard BABY !</button>
+
+    <script>
+
+        const container = document.querySelector('#container');
+
+        // Adding a div
+        const content = document.createElement('div');
+        content.classList.add('content');
+        content.style.paddingLeft ="20px";
+        content.textContent = 'This is the glorious text-content!';
+        content.textContent += ' | First you add a div. Then asign a class to it.';
+        content.textContent += ' | Then you write some text in it';
+        content.textContent += " | And then append the div to it's parent";
+
+        container.appendChild(content);
+
+
+        // Adding a <p> with style
+        const paragraph = document.createElement('p');
+        paragraph.style.color = 'red';
+        paragraph.style.paddingLeft ="20px";
+        paragraph.textContent = 'Hey, I\'m a red p !';
+
+        container.appendChild(paragraph);
+
+
+        // Adding a <h3>
+        const titleThree = document.createElement('h3');
+        titleThree.style.color = 'darkslategrey';
+        titleThree.style.paddingLeft ="20px";
+        titleThree.textContent = 'And I\'m a blue h3 !';
+
+        container.appendChild(titleThree);
+
+
+        // Adding a new <div> inside
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('divInside');
+        newDiv.style.cssText = 'border: 2px solid darkolivegreen; border-radius: 8px; background-color: #617C8C';
+
+        //container.appendChild(newDiv);
+
+
+        // Adding a new <h1> in the new div
+        const newMainTitle = document.createElement('h1');
+        newMainTitle.style.cssText = 'color: darkgoldenrod; font-family: dyuthi; font-size: 32px; margin-left: 20px';
+        newMainTitle.textContent = 'I\'m a h1 in an new div !';
+
+        newDiv.appendChild(newMainTitle);
+
+
+        // Adding a new <p> in the new div
+        const newParagraph = document.createElement('p');
+        newParagraph.style.color = 'darkred';
+        newParagraph.style.paddingLeft ="20px";
+        newParagraph.textContent = 'ME TOO ;p';
+
+        newDiv.appendChild(newParagraph);
+
+        container.appendChild(newDiv);
+
+
+        // Event Handling (2nd button)
+        var btn1 = document.querySelector('#btn1');
+        btn1.onclick = () => alert("Hello World");
+
+
+        // Event Handling (3th button)
+        var btn2 = document.querySelector('#btn2');
+        btn2.addEventListener('click', () => {
+            alert("Hello World");
+        });
+
+        // Event Handling (4th button)
+        function alertFunction() {
+            alert("YAY! YOU DID IT!");
+        }
+
+        //overwriting the 2nd button with the function
+        btn.onclick = alertFunction;
+
+
+        // Event Handling (5th button)
+        var btn5 = document.querySelector('#btn5');
+        btn5.addEventListener('click', alertFunction);
+
+    </script>
+
+</body>
+</html>
