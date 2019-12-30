@@ -10,18 +10,28 @@
         THE TITLE OF YOUR WEBPAGE
     </h1>
 
-    <div id="container"></div>
-
+    <div id="container1"></div>
+    <br>
+    <!--
     <button onclick="alert('Hello World')">Click Me</button>
     <button id="btn1">Click Me</button>
     <button id="btn2">Click Me Too</button>
 
     <button onclick="alertFunction()">CLICK ME BABY</button>
+    <button id='btn4'>CLICK ME BABY !</button>
     <button id='btn5'>CLICK ME hard BABY !</button>
+    <br><br>
+    -->
+    <div id="container2">
+        <button id="1">Click Me</button>
+        <button id="2">Click Me</button>
+        <button id="3">Click Me</button>
+    </div>
+
 
     <script>
 
-        const container = document.querySelector('#container');
+        const container = document.querySelector('#container1');
 
         // Adding a div
         const content = document.createElement('div');
@@ -79,7 +89,7 @@
 
         container.appendChild(newDiv);
 
-
+        /*
         // Event Handling (2nd button)
         var btn1 = document.querySelector('#btn1');
         btn1.onclick = () => alert("Hello World");
@@ -97,12 +107,29 @@
         }
 
         //overwriting the 2nd button with the function
-        btn.onclick = alertFunction;
+        btn4.onclick = alertFunction;
 
 
         // Event Handling (5th button)
         var btn5 = document.querySelector('#btn5');
-        btn5.addEventListener('click', alertFunction);
+        btn5.addEventListener('click', function(e) {
+            console.log(e.target);
+            e.target.style.background = 'olive';
+        });
+        */
+
+        // buttons is a node list. It looks and acts much like an array.
+        const buttons = document.querySelectorAll('button');
+
+        // we use the .forEach method to iterate through each button
+        buttons.forEach((button) => {
+
+            // and for each one we add a 'click' listener
+            button.addEventListener('click', (e) => {
+                alert(button.id);
+            });
+        });
+
 
     </script>
 
