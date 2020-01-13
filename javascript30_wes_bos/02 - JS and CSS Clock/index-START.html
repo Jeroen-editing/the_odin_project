@@ -8,8 +8,6 @@
   <style>
     .clock-face {
       position: relative;
-
-
       align-items: center;
       width: 100%;
       height: 100%;
@@ -20,26 +18,26 @@
 
     .hour {
       position: relative;
-      top: 49px;
-      left: 49px;
-      width: 80%;
-      height: 80%;
+      top: 79px;
+      left: 78px;
+      width: 68%;
+      height: 68%;
       border: 1px solid black;
     }
 
     .minute {
       position: relative;
-      left: 20px;
-      bottom: 380px;
-      width: 92%;
-      height: 92%;
+      left: 4px;
+      bottom: 334px;
+      width: 98%;
+      height: 98%;
       border: 1px solid black
     }
 
     .second  {
       position: relative;
-      left: 1.22rem;
-      bottom: 838px;
+      left: 1.21rem;
+      bottom: 805px;
       width: 92%;
       height: 92%;
       border: 1px solid black
@@ -47,19 +45,40 @@
 
     .hand {;
       width: 50%;
-      height: 6px;
-      background: black;
+      height: 10px;
       position: absolute;
       top: 50%;
+      background: black;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.05s;
       transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
       /*transition-timing-function: cubic-bezier(0,4,5,0);*/
+      box-shadow: 0 0 4px 2px rgba(255,121,0,0.6);
     }
 
     .second-hand {
+      height: 6px;
       background: darkred;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+
+    }
+
+    .middle {
+      width: 5%;
+      height: 5%;
+      position: absolute;
+      /*margin-top: -200px;*/
+      left: 234.5px;
+      bottom: 230px;
+      border: 1px solid rgba(255,121,0,0.6);
+      border-radius: 50%;
+      /*background-color: rgb(19, 9, 0);*/
+      /**/background-color: #ff9601;
+      box-shadow: 0 0 4px 4px rgba(255,121,0,0.6);
     }
   </style>
 </head>
@@ -72,15 +91,17 @@
             <div class="hand hour-hand"></div>
           </div>
           <div class="minute">
-            <div class="hand min-hand"></div>
+            <div class="hand minute-hand"></div>
           </div>
           <div class="second">
             <div class="hand second-hand"></div>
           </div>
+          <div class="middle"></div>
         </div>
       </div>
   </main>
 
-  <script src="clock.js"></script>
+  <!--<script src="clock.js"></script>-->
+
 </body>
 </html>

@@ -8,7 +8,7 @@ $border: rgb(19, 9, 0);
 main {
   margin: 20px 0;
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex: 1;
   align-items: center;
