@@ -6,7 +6,29 @@
   <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
+
+<div class="input"></div>
+
+
 <script>
+  const audio = document.querySelector('.input');
+  const sound = '<audio src="394625__diego25__restaurant-bell.mp3" autoplay></audio>';
+  const pressed = [];
+  const secretCode = 'jeroendv';
+
+  window.addEventListener('keyup', (e) => {
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+    if (pressed.join('').includes(secretCode)) {
+      console.log('DING DING');
+      audio.innerHTML = sound;
+      cornify_add();
+    }
+  })
+
 </script>
+
+
 </body>
 </html>
