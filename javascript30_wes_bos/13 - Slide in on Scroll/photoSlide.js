@@ -14,10 +14,30 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 
-const  sliderImages = document.querySelectorAll('slide-in');
+const  sliderImages = document.querySelectorAll('.slide-in');
 
-function checkSlide(e) {
-    console.count(e);
+function checkSlide() {
+
+    sliderImages.forEach(sliderImage => {
+        // halfway through the image to slide in
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        console.log(slideInAt);
+        // bottom or end of the image to slide back out (to reverse when scroll back up)
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        console.log(imageBottom);
+        // to see if image is half shown
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        console.log(isHalfShown);
+        // to see if image is not totaly passed yet
+        const isNotScrolledPast = window.scrollY <  imageBottom;
+        console.log(isNotScrolledPast);
+
+        if (isHalfShown && isNotScrolledPast) {
+            sliderImage.classList.add('active');
+        } else {
+            sliderImage.classList.remove('active');
+        }
+    });
 }
 
-window.addEventListener('scroll', debounce(checkSlide, 100));
+window.addEventListener('scroll', debounce(checkSlide));
