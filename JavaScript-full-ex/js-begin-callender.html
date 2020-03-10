@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-callender</title>
+
+    <style>
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 620px;
+            width: 400px;
+            padding: 20px 0;
+            margin: 0 auto;
+            border: 6px solid peru;
+            border-radius: 8px;
+            background: rgba(66, 197, 141, 0.67);
+            box-shadow: inset 0 0 2px 1px black;
+        }
+        ul {
+            width: 340px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 60px 60px 60px 60px 60px;
+        }
+        h2, h3, ul {
+            padding: 20px 20px;
+            background: gray;
+            border: 4px solid teal;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px 2px black;
+        }
+        h2, h3 {
+            width: 294px;
+            color: whitesmoke;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px black;
+        }
+        .select {
+            display: flex;
+            justify-content: space-between;
+            width: 320px;
+        }
+        .select label {
+            float: left;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px black;
+        }
+        .select select {
+            float: right;
+            width: 181px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+        .output li {
+            display: block;
+            float: left;
+            width: 60%;
+            height: 20px;
+            padding: 6px;
+            margin-bottom: 8px;
+            color: whitesmoke;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+            border: 2px solid white;
+            border-radius: 6px;
+            background-color: teal;
+            box-shadow: 1px 1px 2px 2px black;
+        }
+
+    </style>
+
+<body>
+<section>
+    <h2>Calendar</h2>
+    <!--Callender-->
+    <div class="output">
+        <div class="select">
+            <label for="month">Select Month:</label>
+            <select id="month" onchange="createCalendar()">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <h3></h3>
+        <ul>
+
+        </ul>
+    </div>
+</section>
+    <script>
+        const select = document.querySelector('select');
+        const list = document.querySelector('ul');
+        const h3 = document.querySelector('h3');
+
+        select.onchange = function() {
+            const choice = select.value;
+            let days = 31;
+            if (choice === 'February') {
+                days = 28;
+            }
+            else if (choice === 'April' || choice === 'June' || 
+            choice === 'September' || choice === 'November') {
+                days = 30;
+            }
+            createCalendar(days, choice);
+        };
+
+        function createCalendar(days, choice) {
+            list.innerHTML = '';
+            h3.textContent = choice;
+            for (let i = 1; i <= days; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = i;
+                list.appendChild(listItem);
+            }
+        }
+
+        createCalendar(31, 'January');
+    </script>
+
+</body>
+</html>
