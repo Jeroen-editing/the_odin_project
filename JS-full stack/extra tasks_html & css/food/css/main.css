@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    font-family: 'Roboto', sans-serif;
+}
+h5 {
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.hero-bg {
+    background: rgba(48, 125, 153, 0.2) url('../img/bg.jpg');
+    color: whitesmoke;
+    text-align: center;
+}
