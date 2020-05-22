@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  color: #888;
+  /*font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  background: #293f50;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.container, 
+.grid {
+  margin: 0 auto;
+  width: 960px;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*
+  ========================================
+  Rows
+  ========================================
+*/
+
+.row {
+  background: #fff;
+  padding: 66px 0 44px 0;
+}
+.row,
+.row-alt {
+  min-width: 960px;
+}
+.row-alt {
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #ebf696);
+  background: -moz-linear-gradient(to right, #a1d3b0, #ebf696);
+  background: linear-gradient(to right, #a1d3b0, #ebf696);
+  padding: 44px 0 22px 0;
+  margin-top: 38px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h4, p {
+  margin-bottom: 22px;
+  color: #656b69;
+}
+h1, h2, h3, h5 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+h4, p {
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+}
+h2 {
+  color: #5d9c8f;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 44px;
+}
+h3 {
+  color: #5d9c8f;
+  font-size: 24px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  color: #a8a8a8;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+p {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 42px;
+  padding-bottom: 12px;
+}
+strong {
+  font-weight: 400;
+}
+cite, em {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a:hover {
+  color: #3baf5b;
+}
+a {
+  text-decoration: none;
+  text-underline-offset: 10px;
+  color: #3baefa;
+}
+p {
+  border-bottom: 1px solid #343435;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.logo {
+  margin-top: 8px;
+  border-top: 4px solid #648880;
+  border-bottom: 4px solid #648880;
+  padding: 32px 0 22px 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 54px;
+  letter-spacing: 4px;
+  line-height: 60px;
+  text-shadow: 1px 1px 2px black;
+  float: left;
+}
+.logo > a { 
+  text-decoration: none;
+}
+.tagline {
+  margin: 66px 0 22px 0;
+  text-align: right;
+}
+
+/*
+  ========================================
+  Primary nav --> header & footer
+  ========================================
+*/
+.primary-nav {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: right;
+}
+.top-nav {
+  margin-top: 38px;
+}
+.nav li {
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
+.nav a {
+  font: 300 16px/22px "Montserrat Alternates", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  border: 1px solid #a5a7a8;
+  border-radius: 2px;
+  padding: 2px 10px;
+  background: rgba(172, 178, 176, 0.2);
+  box-shadow: 1px 2px 0 1px rgba(0, 0, 0, 0.35), -1px -2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.primary-nav a:hover {
+  border: 1px solid #1a9a5f;
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  font: 400 22px "Montserrat Alternates", Arial, sans-serif;
+  display: inline-block;
+  margin: 0;
+}
+.btn-alt {
+  border: 1px solid #a3a6a8;
+  padding: 10px 30px;
+  text-decoration: none;
+  background: rgba(230, 229, 229, 0.12);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  text-align: center;
+  line-height: 44px;
+  margin-top: 12px;
+  padding: 22px 80px 66px 80px;
+}
+.hero h2 {
+  padding-bottom: 12px;
+  font-size: 36px;
+  border-bottom: 1px solid #dfe2e5;
+}
+.hero p {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  border: none;
+}
+
+.col-1-3-a {
+  width: 30.5%;
+  margin: 0 12px;
+}
+.col-1-3-b {
+  width: 28%;
+  margin: 0 0 0 12px;
+}
+.col-2-3 {
+  width: 70%;
+}
+.col-1-3-a,
+.col-1-3-b,
+.col-2-3{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid,
+.col-1-3-a,
+.col-1-3-b,
+.col-2-3  {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.teaser {
+  margin-bottom: 44px;
+}
+.teaser .line-under {
+  height: 3px;
+  background-color: #203e4e;
+}
+.teaser .photo {
+  height: 210px;
+  border: 3px solid rgb(65, 126, 158);
+  border-radius: 6px;
+}
+.teaser .prof-speaker {
+  background: rgba(32, 62, 78, 0.6) url('../images/home/speaker-small.jpeg');
+}
+.teaser .three-days {
+  background: rgba(32, 62, 78, 0.6) url('../images/home/public-small.jpeg');
+}
+.teaser .theatre-place {
+  background: rgba(32, 62, 78, 0.6) url('../images/home/venue-1-small.jpeg');
+}
+.teaser h3 {
+  color: #417e9e;
+  font-weight: 600;
+  padding: 4px 0 20px 0;
+}
+.teaser p {
+  height: 111px;
+  margin: 12px 0 0 0;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+}
+.teaser a:hover h3,
+.teaser a:hover h5,
+.teaser a:hover p {
+  color: #2daf32;
+}
+.teaser a:hover .photo {
+  border: 3px solid #2daf32;
+}
+.teaser a:hover .line-under {
+  background-color: #2daf32;
+}
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+.primary-footer {
+  padding-bottom: 44px;
+  padding-top: 44px;
+  color: #648880;
+  font-size: 14px;
+}
+
+.primary-footer small {
+  float: left;
+  font: 300 16px/22px "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  Leads
+  ========================================
+*/
+
+.lead {
+  text-align: center;
+}
+.lead p {
+  font-size: 24px;
+  line-height: 33px;
+  border: none;
+}
+
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+
+.speaker {
+  margin: 44px 0;
+  letter-spacing: 1px;
+}
+.speaker h2 {
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #5d9c8f;
+}
+.speaker h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 30px;
+}
+.speaker p {
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+}
+.speaker-info {
+  margin-top: 52px;
+  padding: 22px 8px;
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+  text-align: center;
+  line-height: 26px;
+  border: 1px solid #5d9c8f;
+  border-radius: 6px;
+  box-shadow: -2px -2px 4px rgba(137, 137, 137, 0.41), 2px 2px 4px rgba(137, 137, 137, 0.41);
+}
+.speaker-info .speaker-photo {
+  margin-top: -100px;
+  height: 160px;
+  border: 1px solid #375f57;
+  border-radius: 50%;
+  box-shadow: -2px -2px 4px rgba(137, 137, 137, 0.2), 2px 2px 4px rgba(137, 137, 137, 0.2);
+}
+.speaker-info ul {
+  margin-top: 10px;
+}
+.speaker-info span {
+  letter-spacing: 0;
+}
+
+/*
+  ========================================
+  Schedule
+  ========================================
+*/
+
+
+
+/*
+  ========================================
+  Venue
+  ========================================
+*/
+
+.venue-theatre {
+  margin-top: 10px;
+}
+.venue-theatre,
+.venue-hotel {
+  height: 300px;
+  margin-bottom: 66px;
+  border: 1px solid #9ba4a1;
+  border-radius: 4px;
+  background-color: #dde3e1;
+}
+.venue-theatre h2,
+.venue-hotel h2 {
+  margin-top: 20px;
+  padding-bottom: 4px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.venue-theatre p,
+.venue-hotel p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 36px;
+  border-bottom: 2px solid #487c72;
+}
+.venue-theatre .mail_phone,
+.venue-hotel .mail_phone {
+  font-weight: 300;
+  border: none;
+}
+.venue-theatre .mail_phone a,
+.venue-hotel .mail_phone a {
+  color: #4687aa;
+}
+.venue-hotel {
+  margin-bottom: 33px;
+}
+.venue-map {
+  display: inline-block;
+  margin: 18px 0 0 64px;
+  padding: 0 0;
+  height: 264px;
+  width: 590px;
+  border: 1px solid #9ba4a1;
+  border-radius: 3px;
+  z-index: 10;
+}
