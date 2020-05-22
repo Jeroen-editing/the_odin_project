@@ -87,7 +87,7 @@ body {
 
 .row {
   background: #fff;
-  padding: 66px 0 44px 0;
+  padding: 66px 0 2px 0;
 }
 .row,
 .row-alt {
@@ -507,7 +507,7 @@ p {
   color: #4687aa;
 }
 .venue-hotel {
-  margin-bottom: 33px;
+  margin-bottom: 66px;
 }
 .venue-map {
   display: inline-block;
@@ -518,4 +518,119 @@ p {
   border: 1px solid #9ba4a1;
   border-radius: 3px;
   z-index: 10;
+}
+
+/*
+  =========================================
+  Register
+  =========================================
+*/
+
+.registration h2 {
+  font-size: 28px;
+}
+.registration h5 {
+  margin-top: 22px;
+  font-size: 20px;
+}
+.registration p {
+  width: 98%;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 32px;
+  border: none;
+}
+.registration .see-you-soon {
+  margin: -12px 0 44px 0;
+  font-size: 18px;
+}
+.registration h4 {
+  margin-bottom: 22px;
+  font-size: 20px;
+}
+.why-attend {
+  padding: 0;
+}
+.why-attend li {
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+.why-attend li .tick-box {
+  height: 16px;
+  border: 1px solid rgba(101, 107, 105, 0.4);
+  border-radius: 2px;
+}
+
+.why-attend li p {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 10px;
+  padding: 0;
+  border: none;
+}
+
+form {
+  padding: 12px 0;
+  background: rgba(99, 131, 124, 0.4);
+  border: 1px solid rgba(27, 55, 55, 0.14);
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.2), -1px -1px 2px 0 rgba(128, 128, 128, 0.2);
+}
+fieldset {
+  margin: 0 4px;
+}
+input,
+select,
+textarea {
+  font: 400 18px "Montserrat Alternates", Arial, sans-serif;
+  line-height: 22px;
+  text-align: left;
+}
+
+:placeholder-shown {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.register-group label {
+  color: #648880;
+  cursor: pointer;
+  font: 400 20px "Montserrat", Arial, sans-serif;
+}
+.register-group input,
+.register-group select,
+.register-group textarea {
+  display: block;
+  margin: 5px 0 24px 0;
+  padding: 4px 8px;
+  color: #1b3737;
+  box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.2), -1px -1px 2px 0 rgba(128, 128, 128, 0.2);
+}
+.register-group input,
+.register-group textarea {
+  width: 250px;
+  border: 1px solid rgba(27, 55, 55, 0.4);
+  border-radius: 4px;
+}
+.register-group select {
+  height: 30px;
+  width: 80px;
+  font: 400 14px "Montserrat", Arial, sans-serif;
+}
+.register-group textarea {
+  height: 121px;
+}
+.btn-default {
+  margin-left: 5px;
+  padding: 12px 30px;
+  color: #ebf696;
+  font: 500 20px "Montserrat", Arial, sans-serif;
+  letter-spacing: 1px;
+  background: #648880;
+  border: 1px solid rgba(27, 55, 55, 0.41);
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.6), -1px -1px 2px 0 rgba(128, 128, 128, 0.6);
 }
