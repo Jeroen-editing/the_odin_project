@@ -87,7 +87,7 @@ body {
 
 .row {
   background: #fff;
-  padding: 66px 0 2px 0;
+  padding: 66px 0 22px 0;
 }
 .row,
 .row-alt {
@@ -100,6 +100,38 @@ body {
   background: linear-gradient(to right, #a1d3b0, #ebf696);
   padding: 44px 0 22px 0;
   margin-top: 38px;
+}
+
+/*
+  ========================================
+  Columns & Grid
+  ========================================
+*/
+
+.col-1-3-a {
+  width: 30.5%;
+  margin: 0 12px;
+}
+.col-1-3-b {
+  width: 28%;
+  margin: 0 0 0 12px;
+}
+.col-2-3 {
+  width: 70%;
+}
+.col-1-3-a,
+.col-1-3-b,
+.col-2-3{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid,
+.col-1-3-a,
+.col-1-3-b,
+.col-2-3  {
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 /*
@@ -136,13 +168,14 @@ h1, h2, h3, h5 {
 h4, p {
   font-family: "Montserrat Alternates", Arial, sans-serif;
 }
-h1 {
+.logo-link h1 {
+  color: #3692d6;
   font-size: 40px;
   font-weight: 600;
   line-height: 44px;
 }
 h2 {
-  color: #5d9c8f;
+  color: #46898f;
   font-size: 24px;
   font-weight: 500;
   line-height: 44px;
@@ -170,10 +203,15 @@ p {
   padding-bottom: 12px;
 }
 strong {
+  color: #a8a8a8;
+  font-size: 18px;
   font-weight: 400;
 }
 cite, em {
   font-style: italic;
+}
+a:focus {
+  outline: none;
 }
 
 /*
@@ -182,15 +220,17 @@ cite, em {
   ========================================
 */
 
-a:hover {
-  color: #3baf5b;
-}
 a {
   text-decoration: none;
   text-underline-offset: 10px;
   color: #3baefa;
 }
-p {
+a:hover {
+  color: #ebf696;
+  border-color: rgb(26, 87, 75);
+  box-shadow: none;
+}
+.nav p {
   border-bottom: 1px solid #343435;
 }
 
@@ -198,45 +238,26 @@ p {
   ========================================
   Primary header
   ========================================
+        ========================================
+        Primary nav --> header & footer
+        ========================================
 */
 
-.logo {
-  margin-top: 8px;
-  border-top: 4px solid #648880;
-  border-bottom: 4px solid #648880;
-  padding: 32px 0 22px 0;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 54px;
-  letter-spacing: 4px;
-  line-height: 60px;
-  text-shadow: 1px 1px 2px black;
-  float: left;
-}
-.logo > a { 
-  text-decoration: none;
-}
-.tagline {
-  margin: 66px 0 22px 0;
-  text-align: right;
-}
-
-/*
-  ========================================
-  Primary nav --> header & footer
-  ========================================
-*/
 .primary-nav {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
-  text-align: right;
 }
 .top-nav {
-  margin-top: 38px;
+  margin: 22px 0 8px 0;
+  text-align: center;
+}
+.bottom-nav {
+  text-align: right;
 }
 .nav li {
   display: inline-block;
-  margin: 0 6px;
+  margin: 0 8px;
   vertical-align: top;
 }
 .nav li:last-child {
@@ -246,14 +267,111 @@ p {
   font: 300 16px/22px "Montserrat Alternates", Arial, sans-serif;
   text-decoration: none;
   text-shadow: 1px 1px 2px black;
-  border: 1px solid #a5a7a8;
-  border-radius: 2px;
-  padding: 2px 10px;
+  border: 1px solid rgba(165, 167, 168, 0.65);
+  border-radius: 4px;
+  padding: 2px 12px;
   background: rgba(172, 178, 176, 0.2);
-  box-shadow: 1px 2px 0 1px rgba(0, 0, 0, 0.35), -1px -2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
+}
+.top-nav li {
+  margin: 0 15px;
+}
+.top-nav li:first-child {
+  margin-left: 0;
+}
+.top-nav li:last-child {
+  margin-right: 0;
+}
+.top-nav a {
+  padding: 6px 44px;
 }
 .primary-nav a:hover {
-  border: 1px solid #1a9a5f;
+  color: #dee88d;
+  background: rgba(33, 111, 96, 0.8);
+  border-color: rgb(22, 74, 64);
+  box-shadow: none;
+}
+
+/*
+        ========================================
+        Logo + date & location
+        ========================================
+*/
+
+.logo-link .logo {
+  float: left;
+  margin-top: 50px;
+  border-top: 1px solid #648880;
+  border-right: 1px solid #648880;
+  border-bottom: 8px solid #648880;
+  border-left: 8px solid #648880;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  padding: 16px 36px 24px 36px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  line-height: 66px;
+  text-shadow: -2px 2px 2px rgba(89, 5, 0, 0.6);
+  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
+}
+.data-link .tagline {
+  float: right;
+  margin: -192px 0 0 0;
+  padding: 16px 28px 20px 28px;
+  border-top: 1px solid #648880;
+  border-right: 1px solid #648880;
+  border-bottom: 5px solid #648880;
+  border-left: 5px solid #648880;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  background: #293f50;
+  letter-spacing: 2px;
+  text-align: right;
+  text-shadow: -2px 2px 2px rgba(89, 5, 0, 0.6);
+  z-index: 10;
+  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
+}
+.logo-link .logo:hover,
+.data-link .tagline:hover {
+  color: #dee88d;
+  background: rgb(33, 111, 96);
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  width: 960px;
+  margin-top: 18px;
+  padding: 22px 60px 66px 60px;
+  text-align: center;
+  line-height: 44px;
+}
+.hero h2 {
+  padding-bottom: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 0 0 black;
+  border-bottom: 1px solid #648880;
+}
+.hero p {
+  margin-top: 12px;
+  color: #aab2b0;
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  text-shadow: 1px 0 0 black;
+}
+.hero .p-for-button {
+  margin: -18px 0 4px 0;
 }
 
 /*
@@ -269,69 +387,38 @@ p {
 }
 .btn-alt {
   border: 1px solid #a3a6a8;
-  padding: 10px 30px;
+  padding: 18px 40px;
+  letter-spacing: 1px;
+  text-shadow: 1px 0 0 black;
   text-decoration: none;
   background: rgba(230, 229, 229, 0.12);
   border-radius: 5px;
-  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
+}
+.btn-alt:hover {
+  color: #dee88d;
+  border-color: rgb(26, 87, 75);
+  background: rgba(33, 111, 96, 0.8);
+  box-shadow: none;
 }
 
 /*
   ========================================
-  Home
+  Teasers
   ========================================
 */
 
-.hero {
-  text-align: center;
-  line-height: 44px;
-  margin-top: 12px;
-  padding: 22px 80px 66px 80px;
+.teaser-container {
+  margin-top: 10px;
+  margin-bottom: 22px;
 }
-.hero h2 {
-  padding-bottom: 12px;
-  font-size: 36px;
-  border-bottom: 1px solid #dfe2e5;
-}
-.hero p {
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-}
-
-.col-1-3-a {
-  width: 30.5%;
-  margin: 0 12px;
-}
-.col-1-3-b {
-  width: 28%;
-  margin: 0 0 0 12px;
-}
-.col-2-3 {
-  width: 70%;
-}
-.col-1-3-a,
-.col-1-3-b,
-.col-2-3{
-  display: inline-block;
-  vertical-align: top;
-}
-
-.grid,
-.col-1-3-a,
-.col-1-3-b,
-.col-2-3  {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
 .teaser {
   margin-bottom: 44px;
 }
 .teaser .line-under {
   height: 3px;
-  background-color: #203e4e;
+  background-color: rgba(33, 70, 86, 0.8);
+  border-radius: 2px;
 }
 .teaser .photo {
   height: 210px;
@@ -347,14 +434,19 @@ p {
 .teaser .theatre-place {
   background: rgba(32, 62, 78, 0.6) url('../images/home/venue-1-small.jpeg');
 }
+.teaser h5 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
 .teaser h3 {
   color: #417e9e;
   font-weight: 600;
-  padding: 4px 0 20px 0;
+  padding: 4px 0 22px 0;
 }
 .teaser p {
   height: 111px;
-  margin: 12px 0 0 0;
+  margin: 14px 0 12px 0;
   font-size: 16px;
   line-height: 26px;
   border: none;
@@ -369,6 +461,18 @@ p {
 }
 .teaser a:hover .line-under {
   background-color: #2daf32;
+}
+.teaser-one {
+  width: 32%;
+  text-align: right;
+}
+.teaser-two {
+  width: 27.6%;
+  text-align: center;
+}
+.teaser-three {
+  width: 32%;
+  text-align: left;
 }
 
 /*
@@ -415,6 +519,9 @@ p {
   margin: 44px 0;
   letter-spacing: 1px;
 }
+.speaker .col-2-3 {
+  padding: 0 12px;
+}
 .speaker h2 {
   font-size: 28px;
   font-weight: 600;
@@ -433,9 +540,16 @@ p {
   line-height: 24px;
   border: none;
 }
+.speaker .personal-quote {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+.speaker .top-text {
+  margin-top: -22px;
+}
 .speaker-info {
-  margin-top: 52px;
+  margin: 52px 14px 0 0;
   padding: 22px 8px;
+  width: 98%;
   font-family: "Montserrat Alternates", Arial, sans-serif;
   text-align: center;
   line-height: 26px;
@@ -463,14 +577,142 @@ p {
   ========================================
 */
 
+.schedules{
+  display: block;
+  margin: 44px auto;
+  padding: 0;
+  border: 1px solid rgba(47, 114, 136, 0.12);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 2px 1px rgba(211, 211, 211, 0.2), inset -1px -1px 2px rgba(211, 211, 211, 0.2);
+}
+.mid-table {
+  margin: 77px auto;
+}
+.bottom-table {
+  margin-bottom: 66px;
+}
 
-
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+thead td h3 {
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+th,
+td {
+  padding: 18px 18px;
+  vertical-align: baseline;
+}
+th {
+  padding-left: 32px;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-align: right;
+  /*
+  border-right: 1px solid rgba(47, 114, 136, 0.26);
+  */
+}
+td {
+  width: 48%;
+}
 /*
-  ========================================
-  Venue
-  ========================================
+tr {
+  border-top: 1px solid rgba(47, 114, 136, 0.26);
+  border-bottom: 1px solid rgba(47, 114, 136, 0.26);
+}
 */
+tr .double-col {
+  padding-left: 12px;
+}
+.table-color {
+  background: rgba(100, 136, 128, 0.06);
+  border: none;
+}
+tbody td {
+  /*border-top: 1px solid #2f7288;*/
+  padding-top: 21px;
+}
+tbody td:first-of-type,
+tbody td:last-of-type {
+  padding-right: 15px;
+}
+tbody td:only-of-type {
+  padding-left: 0;
+  padding-right: 0;
+}
+table h3 {
+  padding: 10px 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+table time {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+table h4 {
+  color: #087e95;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 0 6px 0;
+}
+table p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+}
+table h5 {
+  margin-top: 20px;
+  color: #888;
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: none;
+}
+table a:hover h4,
+table a:hover h5,
+table a:hover p {
+  color: #0f9e1a;
+  cursor: pointer;
+}
+table a:visited h4,
+table a:visited h5,
+table a:visited p {
+  color: #8f6505;
+}
+table a:visited:hover h4,
+table a:visited:hover h5,
+table a:visited:hover p {
+  color: #0f9e1a;
+}
+.schedule-offset h4 {
+  color: #777f85;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 18px;
+}
+.schedule-padding h4,
+.schedule-padding h5,
+.schedule-padding p {
+  padding-left: 18px;
+}
 
+  /*
+    ========================================
+    Venue
+    ========================================
+  */
+
+.venue-container {
+  margin-top: 20px;
+}
 .venue-theatre {
   margin-top: 10px;
 }
@@ -482,16 +724,22 @@ p {
   border-radius: 4px;
   background-color: #dde3e1;
 }
+.venue-theatre .address,
+.venue-hotel .address {
+  padding-left: 12px;
+}
 .venue-theatre h2,
 .venue-hotel h2 {
   margin-top: 20px;
   padding-bottom: 4px;
   font-size: 26px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .venue-theatre p,
-.venue-hotel p{
+.venue-hotel p {
+  width: 290px;
+  padding: 12px 0;
   font-size: 20px;
   letter-spacing: 1px;
   line-height: 36px;
@@ -499,12 +747,17 @@ p {
 }
 .venue-theatre .mail_phone,
 .venue-hotel .mail_phone {
-  font-weight: 300;
+  margin-top: 22px;
+  font-weight: 400;
   border: none;
 }
 .venue-theatre .mail_phone a,
 .venue-hotel .mail_phone a {
-  color: #4687aa;
+  color: #2f7288;
+}
+.venue-theatre .mail_phone a:hover,
+.venue-hotel .mail_phone a:hover {
+  color: #5b9e39;
 }
 .venue-hotel {
   margin-bottom: 66px;
@@ -526,6 +779,9 @@ p {
   =========================================
 */
 
+.registration-container{
+  margin-top: 28px;
+}
 .registration h2 {
   font-size: 28px;
 }
@@ -573,6 +829,7 @@ p {
 }
 
 form {
+  margin-top: 66px;
   padding: 12px 0;
   background: rgba(99, 131, 124, 0.4);
   border: 1px solid rgba(27, 55, 55, 0.14);
@@ -633,4 +890,7 @@ textarea {
   border: 1px solid rgba(27, 55, 55, 0.41);
   border-radius: 4px;
   box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.6), -1px -1px 2px 0 rgba(128, 128, 128, 0.6);
+}
+.btn-default:hover {
+  background: #2f7288;
 }
