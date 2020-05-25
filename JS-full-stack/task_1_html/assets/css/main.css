@@ -94,12 +94,13 @@ body {
   min-width: 960px;
 }
 .row-alt {
+  min-height: 300px;
+  padding: 44px 0 22px 0;
+  margin-top: 38px;
   background: #cbe2c1;
   background: -webkit-linear-gradient(to right, #a1d3b0, #ebf696);
   background: -moz-linear-gradient(to right, #a1d3b0, #ebf696);
   background: linear-gradient(to right, #a1d3b0, #ebf696);
-  padding: 44px 0 22px 0;
-  margin-top: 38px;
 }
 
 /*
@@ -162,17 +163,18 @@ h1, h4, p {
   margin-bottom: 22px;
   color: #656b69;
 }
-h1, h2, h3, h5 {
+h2, h3, h5 {
   font-family: "Montserrat", Arial, sans-serif;
 }
-h4, p {
+h1, h4, p {
   font-family: "Montserrat Alternates", Arial, sans-serif;
 }
-.logo-link h1 {
-  color: #3692d6;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 44px;
+h1 {
+  color: #3ca1ec;
+  font-size: 66px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 80px;
 }
 h2 {
   color: #46898f;
@@ -223,15 +225,10 @@ a:focus {
 a {
   text-decoration: none;
   text-underline-offset: 10px;
-  color: #3baefa;
+  color: #3191d0;
 }
 a:hover {
   color: #ebf696;
-  border-color: rgb(26, 87, 75);
-  box-shadow: none;
-}
-.nav p {
-  border-bottom: 1px solid #343435;
 }
 
 /*
@@ -243,52 +240,76 @@ a:hover {
         ========================================
 */
 
-.primary-nav {
-  font-size: 15px;
+.primary-footer {
+  padding-bottom: 44px;
+  padding-top: 44px;
+  color: #648880;
+  font-size: 14px;
+}
+.primary-footer small {
+  float: left;
+  margin-top: 6px;
+  font: 300 16px "Montserrat Alternates", Arial, sans-serif;
   font-weight: 400;
-  letter-spacing: 1px;
 }
-.top-nav {
-  margin: 22px 0 8px 0;
-  text-align: center;
-}
-.bottom-nav {
-  text-align: right;
+.nav ul {
+  display: flex;
+  flex-direction: row;
 }
 .nav li {
-  display: inline-block;
-  margin: 0 8px;
-  vertical-align: top;
-}
-.nav li:last-child {
-  margin-right: 0;
-}
-.nav a {
-  font: 300 16px/22px "Montserrat Alternates", Arial, sans-serif;
+  font: 400 18px "Montserrat Alternates", Arial, sans-serif;
+  letter-spacing: 1px;
   text-decoration: none;
   text-shadow: 1px 1px 2px black;
-  border: 1px solid rgba(165, 167, 168, 0.65);
-  border-radius: 4px;
-  padding: 2px 12px;
-  background: rgba(172, 178, 176, 0.2);
-  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
 }
 .top-nav li {
-  margin: 0 15px;
+  border-bottom: 1px solid rgba(165, 167, 168, 0.5);
 }
+.top-nav li:nth-child(odd) {
+  border-left: 1px solid rgba(165, 167, 168, 0.5);
+  border-right: 1px solid rgba(165, 167, 168, 0.5);
+}
+/*
 .top-nav li:first-child {
-  margin-left: 0;
+  border-bottom-left-radius: 5px;
 }
 .top-nav li:last-child {
+  border-bottom-right-radius: 5px;
+}
+*/
+.top-nav li a,
+.bottom-nav li a {
+  display: inline-block;
+  text-align: center;
+}
+.top-nav li a {
+  width: 183px;
+  padding: 7px 0 10px 0;
+}
+.bottom-nav ul {
+  justify-content: flex-end;
+}
+.bottom-nav li {
+  margin-right: 12px;
+}
+.bottom-nav li:first-child {
+  margin-left: 0;
+}
+.bottom-nav li:last-child {
   margin-right: 0;
 }
-.top-nav a {
-  padding: 6px 44px;
+.bottom-nav li a {
+  width: 128px;
+  padding: 4px 0;
+  background: rgba(172, 178, 176, 0.08);
+  border: 1px solid rgba(165, 167, 168, 0.65);
+  border-radius: 4px;
+
 }
-.primary-nav a:hover {
+.top-nav li a:hover,
+.bottom-nav li a:hover {
   color: #dee88d;
   background: rgba(33, 111, 96, 0.8);
-  border-color: rgb(22, 74, 64);
   box-shadow: none;
 }
 
@@ -308,17 +329,12 @@ a:hover {
   border-radius: 8px;
   border-top-right-radius: 0;
   padding: 16px 36px 24px 36px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: 8px;
-  line-height: 66px;
-  text-shadow: -2px 2px 2px rgba(89, 5, 0, 0.6);
+  text-shadow: -2px 2px 2px rgba(122, 15, 0, 0.8);
   box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
 }
 .data-link .tagline {
   float: right;
-  margin: -192px 0 0 0;
+  margin: -210px 0 0 0;
   padding: 16px 28px 20px 28px;
   border-top: 1px solid #648880;
   border-right: 1px solid #648880;
@@ -347,7 +363,7 @@ a:hover {
 
 .hero {
   width: 960px;
-  margin-top: 18px;
+  margin-top: 14px;
   padding: 22px 60px 66px 60px;
   text-align: center;
   line-height: 44px;
@@ -381,24 +397,31 @@ a:hover {
 */
 
 .btn {
-  font: 400 22px "Montserrat Alternates", Arial, sans-serif;
   display: inline-block;
   margin: 0;
-}
-.btn-alt {
-  border: 1px solid #a3a6a8;
-  padding: 18px 40px;
+  color: whitesmoke;
+  font: 400 22px "Montserrat Alternates", Arial, sans-serif;
   letter-spacing: 1px;
   text-shadow: 1px 0 0 black;
   text-decoration: none;
-  background: rgba(230, 229, 229, 0.12);
-  border-radius: 5px;
-  box-shadow: 4px -4px 4px rgba(57, 57, 57, 0.4), 2px -2px 2px rgba(32, 32, 32, 0.5),  1px -1px 1px rgba(15, 15, 15, 0.6);
+
 }
-.btn-alt:hover {
+.btn-alt {
+  padding: 18px 40px;
+}
+
+.btn-alt,
+.btn-default {
+  border: 1px solid #267aaa;
+  background: linear-gradient(rgba(46, 125, 183, 0.81), rgba(37, 114, 160, 0.81), rgba(37, 117, 164, 0.81), rgba(50, 136, 199, 0.81));
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.6), -1px -1px 2px 0 rgba(128, 128, 128, 0.6);
+}
+.btn-alt:hover,
+.btn-default:hover{
   color: #dee88d;
-  border-color: rgb(26, 87, 75);
-  background: rgba(33, 111, 96, 0.8);
+  border: 1px solid rgba(33, 111, 96, 0.8);
+  background: linear-gradient(rgba(33, 111, 96, 0.8), rgba(29, 99, 86, 0.7), rgba(25, 94, 82, 0.7), rgba(33, 111, 96, 0.8));
   box-shadow: none;
 }
 
@@ -417,12 +440,12 @@ a:hover {
 }
 .teaser .line-under {
   height: 3px;
-  background-color: rgba(33, 70, 86, 0.8);
+  background-color: #2d79b1;
   border-radius: 2px;
 }
 .teaser .photo {
   height: 210px;
-  border: 3px solid rgb(65, 126, 158);
+  border: 3px solid #2d79b1;
   border-radius: 6px;
 }
 .teaser .prof-speaker {
@@ -440,27 +463,29 @@ a:hover {
   letter-spacing: 2px;
 }
 .teaser h3 {
-  color: #417e9e;
+  color: #2d79b1;
   font-weight: 600;
   padding: 4px 0 22px 0;
 }
 .teaser p {
   height: 111px;
   margin: 14px 0 12px 0;
+  color: #404040;
   font-size: 16px;
+  font-weight: 400;
   line-height: 26px;
   border: none;
 }
 .teaser a:hover h3,
 .teaser a:hover h5,
 .teaser a:hover p {
-  color: #2daf32;
+  color: rgb(45, 154, 134);
 }
 .teaser a:hover .photo {
-  border: 3px solid #2daf32;
+  border: 3px solid rgb(45, 154, 134);
 }
 .teaser a:hover .line-under {
-  background-color: #2daf32;
+  background-color: rgb(45, 154, 134);
 }
 .teaser-one {
   width: 32%;
@@ -477,31 +502,18 @@ a:hover {
 
 /*
   ========================================
-  Primary footer
-  ========================================
-*/
-
-.primary-footer {
-  padding-bottom: 44px;
-  padding-top: 44px;
-  color: #648880;
-  font-size: 14px;
-}
-
-.primary-footer small {
-  float: left;
-  font: 300 16px/22px "Montserrat", Arial, sans-serif;
-  font-weight: 400;
-}
-
-/*
-  ========================================
   Leads
   ========================================
 */
 
 .lead {
   text-align: center;
+}
+.lead h1{
+  color: #4b7e73;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
 }
 .lead p {
   font-size: 24px;
@@ -566,6 +578,9 @@ a:hover {
 }
 .speaker-info ul {
   margin-top: 10px;
+}
+.speaker-info a:hover {
+  color: #2f983c;
 }
 .speaker-info span {
   letter-spacing: 0;
@@ -848,12 +863,13 @@ textarea {
 }
 
 :placeholder-shown {
-  font-size: 18px;
-  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 200;
 }
 
 .register-group label {
-  color: #648880;
+  color: #447168;
   cursor: pointer;
   font: 400 20px "Montserrat", Arial, sans-serif;
 }
@@ -863,14 +879,18 @@ textarea {
   display: block;
   margin: 5px 0 24px 0;
   padding: 4px 8px;
-  color: #1b3737;
+  color: #112323;
   box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.2), -1px -1px 2px 0 rgba(128, 128, 128, 0.2);
 }
 .register-group input,
 .register-group textarea {
   width: 250px;
+  padding-top: 6px;
   border: 1px solid rgba(27, 55, 55, 0.4);
   border-radius: 4px;
+}
+.register-group input {
+  height: 38px;
 }
 .register-group select {
   height: 30px;
@@ -883,14 +903,6 @@ textarea {
 .btn-default {
   margin-left: 5px;
   padding: 12px 30px;
-  color: #ebf696;
   font: 500 20px "Montserrat", Arial, sans-serif;
   letter-spacing: 1px;
-  background: #648880;
-  border: 1px solid rgba(27, 55, 55, 0.41);
-  border-radius: 4px;
-  box-shadow: 1px 1px 2px 0 rgba(128, 128, 128, 0.6), -1px -1px 2px 0 rgba(128, 128, 128, 0.6);
-}
-.btn-default:hover {
-  background: #2f7288;
 }
