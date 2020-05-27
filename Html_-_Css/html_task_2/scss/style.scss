@@ -163,8 +163,34 @@ nav form {
   }
 }
 
-section {
-  width: 100%;
-  height: 220px;
+main {
+  display: inline-block;
+  width: 74%;
+  min-height: 800px;
   background: #f8f8f8;
+
+  .video-container {
+    padding: 25px 2% 10px 6%;
+    .video-screen {
+      height: 720px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+  }
+}
+
+
+aside {
+  display: inline-block;
+  float: right;
+  width: 26%;
+  background: #c1c1c1;
+
+  p{
+    font-size: 28px;
+  }
 }
