@@ -140,13 +140,21 @@ nav form {
 main {
   display: inline-block;
   width: 74%;
-  min-height: 800px;
+  /*min-height: 800px;*/
   background: #f8f8f8; }
-  main .video-container {
+  main .video-box {
     padding: 25px 2% 10px 6%; }
-    main .video-container .video-screen {
-      height: 720px; }
-      main .video-container .video-screen iframe {
+    main .video-box .video-screen {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; }
+      main .video-box .video-screen iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         width: 100%;
         height: 100%; }
 

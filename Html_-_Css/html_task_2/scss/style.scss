@@ -166,20 +166,26 @@ nav form {
 main {
   display: inline-block;
   width: 74%;
-  min-height: 800px;
+  /*min-height: 800px;*/
   background: #f8f8f8;
 
-  .video-container {
+  .video-box {
     padding: 25px 2% 10px 6%;
     .video-screen {
-      height: 720px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
       iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         width: 100%;
         height: 100%;
       }
     }
-
-
   }
 }
 
