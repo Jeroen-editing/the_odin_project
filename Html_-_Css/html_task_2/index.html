@@ -13,7 +13,7 @@
         <nav>
             <div class="left-nav">
                 <a class="sidebar" href="">
-                    <img src="assets/icons/menu-bar-grey.png" alt="" height="22" width="22">
+                    <img src="assets/icons/menu-bar.png" alt="" height="22" width="22">
                 </a><!--
                 --><a class="youtube" href="">
                     <div class="logo">
@@ -67,28 +67,34 @@
                 </a>
             </div>
 
-
             <div class="search-box">
                 <form action="post">
                     <div class="search-field">
                         <input type="search">
-                        <img class="keyboard" src="assets/icons/keyboard-dark.png" alt="" height="24" width="24">
+                        <img class="keyboard" src="assets/icons/keyboard.png" alt="" height="24" width="24">
                     </div>
-                    <div class="button-field">
+                    <div class="button-field tooltip">
                         <button>
-                            <img src="assets/icons/search-grey.png" alt="" height="18" width="18">
+                            <img src="assets/icons/search.png" alt="" height="18" width="18">
                         </button>
+                        <span class="tooltiptext">Search</span>
                     </div>
                 </form>
             </div>
 
             <div class="right-nav">
-                <a class="video-post" href=""><img src="assets/icons/video-call-cross-32.png" alt="" height="20" width="20"></a><!--
-                --><a class="apps" href=""><img src="assets/icons/squared-menu-grey.png" alt="" height="23" width="23"></a><!--
-                --><a class="settings" href=""><img src="assets/icons/menu-vertical-grey.png" alt="" height="18" width="18"></a><!--
+                <a class="video-post tooltip" href=""><img src="assets/icons/video-call-cross.png" alt="" height="20" width="20">
+                    <span class="tooltiptext">Create a video or post</span>
+                </a><!--
+                --><a class="apps tooltip" href=""><img src="assets/icons/squared-menu.png" alt="" height="23" width="23">
+                    <span class="tooltiptext">YouTube apps</span>
+                </a><!--
+                --><a class="settings tooltip" href=""><img src="assets/icons/menu-vertical.png" alt="" height="18" width="18">
+                    <span class="tooltiptext">Settings</span>
+                </a><!--
                 --><a class="login" href="">
-                    <img src="assets/icons/account-48.png" alt="" height="26" width="26" alt="">
-                    <p>Login In</p>
+                    <img src="assets/icons/account.png" alt="" height="26" width="26" alt="">
+                    <p>Sign In</p>
                 </a>
             </div>
         </nav>
@@ -100,79 +106,428 @@
                 <div class="video-screen container">
                     <iframe  src="https://www.youtube-nocookie.com/embed/gU-gz06cJCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">
+                <footer class="video-footer">
+                    <h1>
+                        Massive Attack - Psyche
+                    </h1>
+                    <div class="video-views-date">
+                        <h4>
+                            601,827 views &#8226; 30 Jul 2018
+                        </h4>
+                        <aside class="rate-share-save-options">
+                            <div class="ratings">
+                                <div class="like tooltip">
+                                    <img src="assets/icons/like.png" alt="" height="20" width="20">
+                                    <p>10K</p>
+                                    <span class="tooltiptext">I like this</span>
+                                </div>
+                                <div class="dislike tooltip">
+                                    <img src="assets/icons/dislike.png" alt="" height="20" width="20">
+                                    <p>267</p>
+                                    <span class="tooltiptext">I dislike this</span>
+                                </div>
+                            </div>
+                            <div class="share">
+                                <div class="share-video tooltip">
+                                    <img src="assets/icons/forward-arrow.png" alt="" height="18" width="18">
+                                    <p>Share</p>
+                                    <span class="tooltiptext">Share</span>
+                                </div>
+                            </div>
+                            <div class="save">
+                                <div class="save-video">
+                                    <img src="assets/icons/playlist.png" alt="" height="18" width="18">
+                                    <p>Save</p>
+                                </div>
+                            </div>
+                            <div class="report-translate">
+                                <div class="video-options">
+                                    <img src="assets/icons/menu-horizontal.png" alt="" height="20" width="20">
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
 
-                </div>
+                </footer>
+
             </div>
         </section><!--
-        --><section>
+        --><section class="publisher-info">
+            <img class="publisher-photo" src="assets/photos/massive-attack.jpg" alt="" height="46" width="46">
             <div class="info-container">
-                
+                <div class="publisher-name-subscribers">
+                    <div class="publisher-title">
+                        <h3 class="publisher-name">massiveattack <span>&#9834;</span> </h3>
+                        <p class="subscribers">318K subscribers</p>
+                    </div>
+                    <button class="subscribe-sigin-btn" id="subscribe-signin-button">
+                        Subscribe
+                        <div class="subscribe-sigin-hide subscribe-sigin-container" id="hidden-subscribe-sigin">
+                            <div class="subscribe">
+                                <h4>Want to subscribe to this channel?</h4>
+                                <p>Sign in to subscribe to this channel</p>
+                            </div>
+                            <div class="signin">
+                                <a href="https://accounts.google.com/signin/v2/identifier?service=youtube&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                                    sign in
+                                </a>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <p class="publisher-text">Music video by Massive Attack performing Psyche. &#169; 2010 Virgin Records Ltd</p>
+                <a href="http://vevo.ly/N5fdCe">http://vevo.ly/N5fdCe</a>
+
+                <div class="dropdown-info">
+                    <div class="table-hide table-container" id="hidden-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th><a href="">Music</a></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="2">Music in this video</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Learn more</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Listen ad-free with YouTube Premium</td>
+                            </tr>
+                            <tr>
+                                <th>Song</th>
+                                <td>Psyche</td>
+                            </tr>
+                            <tr>
+                                <th>Artist</th>
+                                <td><a href="https://www.youtube.com/channel/UCLqMjQtlnOkknN-FvrtQ0WQ">Massive Attack</a></td>
+                            </tr>
+                            <tr>
+                                <th>Writers</th>
+                                <td>Martina Topley‐Bird, Robert Del Naja, Neil Davidge, Grant Marshall</td>
+                            </tr>
+                            <tr>
+                                <th class="license">Licensed to <br> YouTube by</th>
+                                <td>UMG (on behalf of Virgin Records Ltd); Kobalt Music Publishing, AMRA, Spirit Music Publishing, UMPG Publishing, ASCAP, UNIAO BRASILEIRA DE EDITORAS DE MUSICA - UBEM, Hexacorp (music publishing), BMI - Broadcast Music Inc., UMPI, LatinAutor - UMPG, CMRRA, LatinAutor, and 14 music rights societies</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button id="table-button">Show more</button>
+                </div>
             </div>
         </section>
+
+        <article class="comments-container">
+            <section>
+                <div class="comments-sorting">
+                    <p>259 Comments</p>
+                    <button class="comments-btn tooltip" id="sort-button">
+                        <img src="assets/icons/sort.png" alt="" width="20" height="20">
+                        <p>Sort by</p>
+                        <span class="tooltiptext">Sort comments</span>
+                        <div class="menu-hide menu-container" id="hidden-menu">
+                            <p>Top comments</p>
+                            <p>Newest first</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="comment-input">
+                    <img src="assets/icons/account.png" alt="" height="48" width="48">
+                    <form action="post">
+                        <input type="text" placeholder="Add a public comment...">
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-yelange.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">2 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Amet beatae consequuntur cupiditate illo
+                            inventore, quisquam quod sed. Beatae soluta, voluptatem! <br> Error fugit id maiores nam non possimus quae,
+                            quasi voluptatem.
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>142</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-black.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">just a name</h4>
+                            <h4 class="comment-date">3 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit !
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>10</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-yelange.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">5 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            <br> Error fugit id maiores nam non possimus quae, quasi voluptatem.
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>58</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-red.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">not my name</h4>
+                            <h4 class="comment-date">7 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit !
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>8</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-black.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">9 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            <br> Error fugit id maiores nam non possimus quae, quasi voluptatem.
+                            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid cum deleniti eos
+                            minima obcaecati!
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>4</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-green.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">11 months ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit !
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>106</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-green.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">1 year ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit !
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>59</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-yelange.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">its me again</h4>
+                            <h4 class="comment-date">1 year ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolore eius explicabo fuga
+                            illum impedit magnam minima modi nesciunt nostrum praesentium quasi quod saepe sed, voluptatibus.
+                            <br> Dolores numquam quae quo tempora? Rerum!
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>43</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account-red.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">2 years ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit !
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>2</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="comments">
+                    <img src="assets/icons/account.png" alt="" height="48" width="48">
+                    <div class="personal-comment">
+                        <div class="commenter-name-date">
+                            <h4 class="commenter-name">another name</h4>
+                            <h4 class="comment-date">2 years ago</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                        <div class="comment-like-reply">
+                            <div class="comment-like">
+                                <img src="assets/icons/like.png" alt="" height="16" width="16">
+                                <p>17</p>
+                            </div>
+                            <div class="comment-dislike">
+                                <img src="assets/icons/dislike.png" alt="" height="16" width="16">
+                            </div>
+                            <div class="comment-reply">
+                                <p>reply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
-    <aside>
+    <aside class="playlist">
         <p>test</p>
     </aside>
 
-    <article>
-        <section>
-            <div>
-                <form action="post">
-
-                </form>
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-
-        <section>
-            <div class="comment">
-
-            </div>
-        </section>
-    </article>
-
+    <script src="dropdowns.js"></script>
 </body>
 </html>
