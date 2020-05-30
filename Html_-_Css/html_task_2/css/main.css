@@ -107,20 +107,19 @@ nav {
   top: 0;
   height: 56px;
   width: 100%;
-  padding: 8px 20px;
+  padding: 8px 20px 8px 16px;
   background: rgba(255, 255, 255, 0.98); }
 
 a {
-  text-decoration: none;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 .left-nav,
 .search-box {
   display: flex;
   flex-direction: row;
-  vertical-align: center;
-  padding-top: 4px; }
+  vertical-align: center; }
 
 /*
   --------------------------
@@ -131,16 +130,29 @@ a {
   display: block;
   min-width: 150px; }
 
-.sidebar {
-  margin-right: 20px; }
+.sidebar-btn-show {
+  margin-left: 2px;
+  margin-right: 20px;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  padding: 6px 6px;
+  border: none;
+  background: none;
+  border-radius: 50%; }
 
+.sidebar-btn-show:active {
+  background: #d6d6d6; }
+
+/*  Sidebar-styling after nav-styling
+    - - - - - - - - - - - - - - - - -  */
 .logo {
   display: flex;
   flex-direction: row;
   width: 100px;
-  padding-top: 4px; }
+  padding-top: 6px; }
   .logo .brand-name {
-    height: 24px;
+    height: 26px;
     display: block; }
   .logo .brand-name:not(:root) {
     overflow: hidden;
@@ -160,6 +172,7 @@ a {
   display: inline-block;
   horiz-align: center;
   width: 60%;
+  padding-top: 4px;
   max-width: 640px;
   height: 28px;
   background: white; }
@@ -244,6 +257,172 @@ nav form {
     font-weight: 600;
     text-transform: uppercase; }
 
+/*---------------------------------------------------------------------------------------*/
+/*
+  *************************
+  Side-bar
+  *************************
+*/
+.hidden-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2; }
+  .hidden-sidebar .sidebar-container {
+    width: 240px;
+    font-size: 15px;
+    background: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12), 0px 6px 8px 0px rgba(0, 0, 0, 0.12); }
+  .hidden-sidebar .sidebar-top-nav {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    position: fixed;
+    top: 0;
+    padding-top: 12px;
+    width: 218px;
+    height: 44px;
+    padding-left: 22px;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid #dddddd; }
+  .hidden-sidebar .sidebar-btn-hide {
+    margin-left: 2px;
+    margin-right: 20px;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    padding: 6px 6px;
+    border: none;
+    background: none;
+    border-radius: 50%; }
+  .hidden-sidebar .sidebar-btn-hide:active {
+    background: #d6d6d6; }
+  .hidden-sidebar .logo {
+    padding-top: 2px; }
+  .hidden-sidebar .sidebar-links {
+    display: block;
+    height: 40px; }
+    .hidden-sidebar .sidebar-links a {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      color: #3b3b3b; }
+      .hidden-sidebar .sidebar-links a p {
+        margin-left: 20px; }
+  .hidden-sidebar .home-box,
+  .hidden-sidebar .library-history-box,
+  .hidden-sidebar .sign-in-box,
+  .hidden-sidebar .best-of,
+  .hidden-sidebar .channels,
+  .hidden-sidebar .more-from-youtube,
+  .hidden-sidebar .technical {
+    display: block;
+    padding-top: 18px;
+    padding-left: 28px;
+    border-bottom: 1px solid #dddddd; }
+  .hidden-sidebar .home-box {
+    height: 120px;
+    padding-top: 24px;
+    margin-top: 56px; }
+  .hidden-sidebar .library-history-box {
+    height: 80px; }
+  .hidden-sidebar .sign-in-box {
+    height: 100px;
+    padding-bottom: 4px; }
+    .hidden-sidebar .sign-in-box p {
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 20px; }
+    .hidden-sidebar .sign-in-box .sign-in-logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 24px;
+      width: 88px;
+      margin-top: 14px;
+      padding: 4px 10px 4px 8px;
+      border: 1px solid #225fb5;
+      border-radius: 2px; }
+      .hidden-sidebar .sign-in-box .sign-in-logo p {
+        margin-left: 8px;
+        color: #225fb5;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase; }
+  .hidden-sidebar .best-of h2,
+  .hidden-sidebar .more-from-youtube h2 {
+    padding-bottom: 16px;
+    color: #4b4b4b;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase; }
+  .hidden-sidebar .judicial-dev-links,
+  .hidden-sidebar .terms-policy-links {
+    display: block;
+    padding-top: 18px;
+    padding-left: 28px; }
+    .hidden-sidebar .judicial-dev-links a,
+    .hidden-sidebar .terms-policy-links a {
+      color: #5e5e5e;
+      font-size: 13px;
+      font-weight: 600; }
+  .hidden-sidebar .google-copyright {
+    display: block;
+    padding-top: 18px;
+    padding-left: 28px;
+    padding-bottom: 20px;
+    color: #979797;
+    font-size: 13px; }
+
+.sidebar-hide {
+  animation: slideOut 200ms forwards; }
+
+.sidebar-shown {
+  display: block;
+  top: 0;
+  animation: slideIn 400ms forwards; }
+
+@keyframes slideIn {
+  from {
+    display: block;
+    transform: translateX(-15em);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes slideOut {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-15em);
+    display: block; } }
+/*
+  --------------------------
+  Dark overlay with sidebar slide in
+  --------------------------
+*/
+.overlay {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; }
+
+.animate-overlay {
+  animation: overlay 200ms forwards; }
+
+@keyframes overlay {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /*---------------------------------------------------------------------------------------*/
 /*
   ***********************
@@ -641,5 +820,9 @@ nav form {
   background: #c1c1c1; }
   .playlist p {
     font-size: 28px; }
+  .playlist input {
+    width: 32px;
+    height: 18px;
+    background-size: 6px; }
 
 /*# sourceMappingURL=main.css.map */

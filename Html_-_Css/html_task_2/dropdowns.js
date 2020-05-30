@@ -1,4 +1,33 @@
-// ***********************   TABLE   ******************************************
+// ***********************  SIDEBAR  **********************************************************************
+
+let sidebarShow = document.getElementById('show-sidebar');
+let sidebarHide = document.getElementById('hide-sidebar');
+
+let sidebar = document.getElementById('hidden-sidebar');
+let overlay = document.getElementById('overlay');
+
+sidebarShow.addEventListener('click', showSlidebar);
+
+function showSlidebar() {
+
+    sidebar.classList.add('sidebar-shown');
+    sidebar.classList.remove('sidebar-hide');
+    overlay.style.display = 'block';
+    overlay.classList.add('animate-overlay');
+}
+
+sidebarHide.addEventListener('click', hideSlidebar);
+
+function hideSlidebar() {
+
+    sidebar.classList.remove('sidebar-shown');
+    sidebar.classList.add('sidebar-hide');
+    overlay.style.display = 'none';
+    overlay.classList.remove('animate-overlay');
+}
+hideSlidebar();
+
+// ***********************   TABLE   **********************************************************************
 
 let btnTable = document.getElementById('table-button');
 
@@ -21,7 +50,7 @@ btnTable.addEventListener('click', dropdownTable);
 
 
 
-// ***********************   MENU   ******************************************
+// ***********************   MENU   ***********************************************************************
 
 let btnMenu = document.getElementById('sort-button');
 
@@ -39,7 +68,7 @@ function dropdownMenu () {
 btnMenu.addEventListener('click', dropdownMenu);
 
 
-// ***********************   SIGNI IN & SUBSCRIBE   ******************************************
+// ***********************   SIGNI IN & SUBSCRIBE   *******************************************************
 
 let btnSubscribeSignIn = document.getElementById('subscribe-signin-button');
 
