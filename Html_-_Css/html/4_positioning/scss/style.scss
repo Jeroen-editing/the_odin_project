@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 @mixin wider-grid {
     display: grid;
     grid-template-columns: auto 1200px auto;
@@ -13,28 +18,94 @@
 @mixin basic-vertical-flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .title {
     grid-area: title;
 }
-
 .image {
     grid-area: imageblock;
 }
-
 .text {
     grid-area: textblock;
 }
+.navLeft {
+    grid-area: leftNav;
+}
+.journal {
+    grid-area: brand;
+}
+.navRight {
+    grid-area: rightNav;
+}
 
-nav {
-    @include basic-vertical-flex;
-    height: 40px;
+.pageNav {
+    display: grid;
+    grid-template-columns: auto 1000px auto;
+    grid-template-areas: "leftNav brand rightNav";
+    height: 42px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    box-shadow: 0 1px 2px 1px rgb(222, 222, 222);
 
     .navLeft,
     .navRight {
         @include basic-vertical-flex;
+        align-items: center;
+    }
+}
+
+.navLeft {
+    max-height: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+    .navIcon {
+        height: 14px;
+        width: 14px;
+        margin-right: 26px;
+    }
+    .subject {
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.navMiddle {
+    margin: 0 auto;
+
+    .journalName {
+        height: 40px;
+        margin-left: -60px;
+    }
+}
+
+.navRight {
+    margin-top: -6px;
+
+    input {
+        height: 34px;
+        padding: 2px 12px 0 12px;
+        color: white;
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: rgb(57, 106, 138);
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            background: rgb(44, 82, 107);
+        }
+    }
+    .subscribe {
+        margin-left: -40px;
+    }
+    .logIn {
+        margin-left: 6px;
     }
 }
 
@@ -47,19 +118,79 @@ header {
 
     h1 {
         @include main-flex;
-        margin: 0 auto;
-        font-size: 38px;
+        margin: 28px auto;
+        font-family: 'Sansita', serif;
+        font-size: 34px;
         font-style: italic;
-        font-weight: 900;
+        font-weight: 700 italic;
+        word-spacing: 4px;
         line-height: 44px;
     }
 
     .subText {
         width: 880px;
+        margin-top: 12px;
+        color: rgb(58, 58, 58);
+        font-size: 17px;
+        font-weight: 500;
 
         span {
             color: rgb(101, 101, 101);
+            font-size: 15px;
             padding: 0 4px;
+        }
+    }
+}
+
+.textHeader {
+    display: block;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 24px 0 15px 0;
+    font-family: 'Libre Franklin', sans-serif;
+
+    h4 {
+        width: 600px;
+        
+        span {
+            text-decoration: underline rgb(158, 158, 158);
+            text-underline-offset: 2px;
+        }
+    }
+
+    .date_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        margin-top: 8px;
+
+        .articleNav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly; 
+            width: 260px;
+        }
+        .date {
+            margin-top: 20px;
+            color: rgb(58, 58, 58);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .madia {
+            height: 16px;
+            width: 16px;
+            padding: 6px;
+            background: rgb(232, 232, 232);
+            border-radius: 50%;
+        }
+
+        .bookmark,
+        .chat {
+            height: 30px;
+            width: 32px;
         }
     }
 }
@@ -70,10 +201,11 @@ header {
 }
 
 .mainText .textPart {
-    margin: 0;
+    margin: 0 2px 0 0;
     padding-bottom: 20px;
-    font-size: 22px;
-    font-weight: 500;
+    font-family: 'Alegreya', serif;
+    font-size: 23px;
+    font-weight: 400;
     line-height: 30px;
 }
 

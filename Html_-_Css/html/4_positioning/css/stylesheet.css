@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 .title {
   grid-area: title; }
 
@@ -7,16 +11,68 @@
 .text {
   grid-area: textblock; }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 40px; }
-  nav .navLeft,
-  nav .navRight {
+.navLeft {
+  grid-area: leftNav; }
+
+.journal {
+  grid-area: brand; }
+
+.navRight {
+  grid-area: rightNav; }
+
+.pageNav {
+  display: grid;
+  grid-template-columns: auto 1000px auto;
+  grid-template-areas: "leftNav brand rightNav";
+  height: 42px;
+  padding: 0 20px;
+  border-bottom: 1px solid #b4b4b4;
+  box-shadow: 0 1px 2px 1px #dedede; }
+  .pageNav .navLeft,
+  .pageNav .navRight {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; }
+    justify-content: center;
+    align-items: center; }
+
+.navLeft {
+  max-height: 20px;
+  box-sizing: border-box;
+  margin-top: 10px; }
+  .navLeft .navIcon {
+    height: 14px;
+    width: 14px;
+    margin-right: 26px; }
+  .navLeft .subject {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase; }
+
+.navMiddle {
+  margin: 0 auto; }
+  .navMiddle .journalName {
+    height: 40px;
+    margin-left: -60px; }
+
+.navRight {
+  margin-top: -6px; }
+  .navRight input {
+    height: 34px;
+    padding: 2px 12px 0 12px;
+    color: white;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #396a8a;
+    border: none;
+    border-radius: 4px; }
+    .navRight input:hover {
+      background: #2c526b; }
+  .navRight .subscribe {
+    margin-left: -40px; }
+  .navRight .logIn {
+    margin-left: 6px; }
 
 header {
   display: grid;
@@ -27,16 +83,62 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 600px;
-    margin: 0 auto;
-    font-size: 38px;
+    margin: 28px auto;
+    font-family: 'Sansita', serif;
+    font-size: 34px;
     font-style: italic;
-    font-weight: 900;
+    font-weight: 700 italic;
+    word-spacing: 4px;
     line-height: 44px; }
   header .subText {
-    width: 880px; }
+    width: 880px;
+    margin-top: 12px;
+    color: #3a3a3a;
+    font-size: 17px;
+    font-weight: 500; }
     header .subText span {
       color: #656565;
+      font-size: 15px;
       padding: 0 4px; }
+
+.textHeader {
+  display: block;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 24px 0 15px 0;
+  font-family: 'Libre Franklin', sans-serif; }
+  .textHeader h4 {
+    width: 600px; }
+    .textHeader h4 span {
+      text-decoration: underline #9e9e9e;
+      text-underline-offset: 2px; }
+  .textHeader .date_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-top: 8px; }
+    .textHeader .date_links .articleNav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 260px; }
+    .textHeader .date_links .date {
+      margin-top: 20px;
+      color: #3a3a3a;
+      font-size: 12px;
+      font-weight: 500; }
+    .textHeader .date_links .madia {
+      height: 16px;
+      width: 16px;
+      padding: 6px;
+      background: #e8e8e8;
+      border-radius: 50%; }
+    .textHeader .date_links .bookmark,
+    .textHeader .date_links .chat {
+      height: 30px;
+      width: 32px; }
 
 .mainText {
   display: flex;
@@ -46,10 +148,11 @@ header {
   margin: 0 auto; }
 
 .mainText .textPart {
-  margin: 0;
+  margin: 0 2px 0 0;
   padding-bottom: 20px;
-  font-size: 22px;
-  font-weight: 500;
+  font-family: 'Alegreya', serif;
+  font-size: 23px;
+  font-weight: 400;
   line-height: 30px; }
 
 .video {
