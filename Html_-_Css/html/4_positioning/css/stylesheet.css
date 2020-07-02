@@ -2,10 +2,14 @@
   margin: 0;
   padding: 0; }
 
+body, main {
+  width: 100%;
+  overflow-x: hidden; }
+
 .title {
   grid-area: title; }
 
-.image {
+.mainImage {
   grid-area: imageblock; }
 
 .text {
@@ -22,14 +26,21 @@
 
 .pageNav {
   display: grid;
-  grid-template-columns: auto 1000px auto;
+  grid-template-columns: auto 900px auto;
   grid-template-areas: "leftNav brand rightNav";
+  position: fixed;
+  top: 0;
   height: 42px;
-  padding: 0 20px;
+  width: 100%;
+  padding: 2px 20px 0 20px;
+  background: white;
   border-bottom: 1px solid #b4b4b4;
-  box-shadow: 0 1px 2px 1px #dedede; }
+  box-shadow: 0 1px 2px 1px #dedede;
+  z-index: 1; }
   .pageNav .navLeft,
-  .pageNav .navRight {
+  .pageNav .replacedLeftNav,
+  .pageNav .navRight,
+  .pageNav .replacedRightNav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,6 +49,7 @@
 .navLeft {
   max-height: 20px;
   box-sizing: border-box;
+  margin-left: -50px;
   margin-top: 10px; }
   .navLeft .navIcon {
     height: 14px;
@@ -45,17 +57,55 @@
     margin-right: 26px; }
   .navLeft .subject {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase; }
 
+.hiddenLeftNav {
+  display: none; }
+
+.replacedLeftNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -40px; }
+  .replacedLeftNav .journalName {
+    height: 36px; }
+
 .navMiddle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 auto; }
   .navMiddle .journalName {
     height: 40px;
-    margin-left: -60px; }
+    margin-left: -50px; }
+
+.hiddenMiddleNav {
+  display: none; }
+
+.replacedMiddleNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px; }
+  .replacedMiddleNav .subject {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    text-transform: uppercase; }
+  .replacedMiddleNav span {
+    margin: 0 1px;
+    color: #b4b4b4;
+    font-size: 18px;
+    font-weight: 100; }
+  .replacedMiddleNav .articleTitle {
+    font-size: 15px;
+    font-family: 'Alegreya', serif; }
 
 .navRight {
-  margin-top: -6px; }
+  margin-top: -4px; }
   .navRight input {
     height: 34px;
     padding: 2px 12px 0 12px;
@@ -74,10 +124,30 @@
   .navRight .logIn {
     margin-left: 6px; }
 
+.hiddenRightNav {
+  display: none; }
+
+.replacedRightNav {
+  margin-top: 4px;
+  margin-left: -40px; }
+  .replacedRightNav .madia {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    padding: 6px;
+    background: #e8e8e8;
+    border-radius: 50%; }
+  .replacedRightNav .bookmark,
+  .replacedRightNav .chat {
+    height: 30px;
+    width: 32px;
+    margin-right: 8px; }
+
 header {
   display: grid;
-  grid-template-columns: auto 1200px auto;
-  grid-template-areas: " . title . " " . imageblock . " " . textblock . "; }
+  grid-template-columns: auto 1190px auto;
+  grid-template-areas: " . title . " " . imageblock . " " . textblock . ";
+  margin-top: 42px; }
   header h1 {
     display: flex;
     flex-direction: column;
@@ -154,6 +224,54 @@ header {
   font-size: 23px;
   font-weight: 400;
   line-height: 30px; }
+  .mainText .textPart a {
+    color: #2d6285;
+    text-underline-offset: 2px; }
+
+.fullWidth {
+  margin: 26px 0 30px 0;
+  padding: 6px 4px;
+  background: #dedede; }
+  .fullWidth .commercialMirror {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%; }
+    .fullWidth .commercialMirror .leftMirror {
+      margin-right: 4px; }
+  .fullWidth img {
+    opacity: 0.8;
+    width: 99.975%; }
+
+.subsciribeInBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0 14px 0;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14px; }
+  .subsciribeInBetween a {
+    color: #2d6285;
+    text-decoration: none;
+    font-weight: 600; }
+
+.drawings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 960px;
+  margin: 28px auto; }
+  .drawings .explainInDrawing {
+    display: grid;
+    grid-template-columns: auto 1190px auto;
+    grid-template-areas: " . imageblock . ";
+    margin: 0 auto; }
+    .drawings .explainInDrawing img {
+      max-width: 960px; }
+  .drawings .drawinSubtext {
+    display: block; }
 
 .video {
   display: flex;

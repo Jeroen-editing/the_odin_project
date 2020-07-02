@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+body, main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 @mixin wider-grid {
     display: grid;
-    grid-template-columns: auto 1200px auto;
+    grid-template-columns: auto 1190px auto;
 }
 
 @mixin main-flex {
@@ -24,7 +29,7 @@
 .title {
     grid-area: title;
 }
-.image {
+.mainImage {
     grid-area: imageblock;
 }
 .text {
@@ -42,15 +47,22 @@
 
 .pageNav {
     display: grid;
-    grid-template-columns: auto 1000px auto;
+    grid-template-columns: auto 900px auto;
     grid-template-areas: "leftNav brand rightNav";
+    position: fixed;
+    top: 0;
     height: 42px;
-    padding: 0 20px;
+    width: 100%;
+    padding: 2px 20px 0 20px;
+    background: white;
     border-bottom: 1px solid rgb(180, 180, 180);
     box-shadow: 0 1px 2px 1px rgb(222, 222, 222);
+    z-index: 1;
 
     .navLeft,
-    .navRight {
+    .replacedLeftNav,
+    .navRight,
+    .replacedRightNav {
         @include basic-vertical-flex;
         align-items: center;
     }
@@ -59,6 +71,7 @@
 .navLeft {
     max-height: 20px;
     box-sizing: border-box;
+    margin-left: -50px;
     margin-top: 10px;
 
     .navIcon {
@@ -68,22 +81,70 @@
     }
     .subject {
         font-family: 'Libre Franklin', sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         text-transform: uppercase;
     }
 }
 
+.hiddenLeftNav {
+    display: none;
+}
+
+.replacedLeftNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -40px;
+
+    .journalName {
+        height: 36px;
+    }
+}
+
 .navMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 0 auto;
 
     .journalName {
         height: 40px;
-        margin-left: -60px;
+        margin-left: -50px;
+    }
+}
+
+.hiddenMiddleNav {
+    display: none;
+}
+
+.replacedMiddleNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+
+    .subject {
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: 12px;
+        letter-spacing: -1px;
+        word-spacing: 1px;
+        text-transform: uppercase;
+    }
+    span {
+        margin: 0 1px;
+        color: rgb(180, 180, 180);
+        font-size: 18px;
+        font-weight: 100;
+    }
+    .articleTitle {
+        font-size: 15px;
+        font-family: 'Alegreya', serif;
     }
 }
 
 .navRight {
-    margin-top: -6px;
+    margin-top: -4px;
 
     input {
         height: 34px;
@@ -109,12 +170,39 @@
     }
 }
 
+.hiddenRightNav {
+    display: none;
+}
+
+.replacedRightNav {
+    margin-top: 4px;
+    margin-left: -40px;
+
+    .madia {
+        height: 16px;
+        width: 16px;
+        margin-right: 8px;
+        padding: 6px;
+        background: rgb(232, 232, 232);
+        border-radius: 50%;
+    }
+
+    .bookmark,
+    .chat {
+        height: 30px;
+        width: 32px;
+        margin-right: 8px;
+    }
+}
+
 header {
     @include wider-grid;
     grid-template-areas:
         " . title . "
         " . imageblock . "
         " . textblock . ";
+
+    margin-top: 42px;
 
     h1 {
         @include main-flex;
@@ -207,6 +295,73 @@ header {
     font-size: 23px;
     font-weight: 400;
     line-height: 30px;
+
+    a {
+        color: rgb(45, 98, 133);
+        text-underline-offset: 2px;
+    }
+}
+
+.fullWidth {
+    margin: 26px 0 30px 0;
+    padding: 6px 4px;
+    background: rgb(222, 222, 222);
+
+    .commercialMirror {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 100%;
+        
+
+        .leftMirror {
+            margin-right: 4px;
+        }
+    
+    }
+    img {
+        opacity: 0.8;
+        width: 99.975%;
+    }
+}
+
+.subsciribeInBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6px 0 14px 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+
+    a {
+        color: rgb(45, 98, 133);
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+.drawings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 960px;
+    margin: 28px auto;
+    
+    .explainInDrawing {
+        @include wider-grid();
+        grid-template-areas: " . imageblock . ";
+        margin: 0 auto;
+
+        img {
+            max-width: 960px;
+        }
+    }
+
+    .drawinSubtext {
+        display: block;
+    }
 }
 
 .video {
