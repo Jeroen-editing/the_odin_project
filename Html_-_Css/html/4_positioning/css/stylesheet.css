@@ -237,12 +237,54 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     max-width: 100%; }
-    .fullWidth .commercialMirror .leftMirror {
-      margin-right: 4px; }
   .fullWidth img {
     opacity: 0.8;
     width: 99.975%; }
+  .fullWidth .textoverflow {
+    display: block;
+    position: absolute;
+    padding: 14px 16px 12px 16px;
+    color: white;
+    font-family: 'Averia Serif Libre', cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-shadow: 1px 1px 2px black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; }
+  .fullWidth #textPopUpOne {
+    margin: -250px 0 0 700px;
+    background: rgba(58, 58, 58, 0.2); }
+    .fullWidth #textPopUpOne .textoverflowTwo {
+      text-align: right; }
+  .fullWidth #textPopUpTwo {
+    margin: -160px 0 0 200px; }
+  .fullWidth #textPopUpThree {
+    margin: -210px 0 0 500px;
+    background: rgba(58, 58, 58, 0.4); }
+  .fullWidth .textoverflow_hidden {
+    opacity: 0; }
+  .fullWidth .textoverflow_shown {
+    animation: apear 2.5s forwards; }
+  .fullWidth .textoverflow_flowOut {
+    animation: disapear 2.5s forwards; }
+  .fullWidth .textoverflowOne {
+    margin: 0 0 6px 0; }
+  .fullWidth .textoverflowTwo {
+    margin: 0 0 0 110px; }
 
+@keyframes apear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes disapear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 .subsciribeInBetween {
   display: flex;
   flex-direction: column;
