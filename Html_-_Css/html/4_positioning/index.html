@@ -11,10 +11,91 @@
 <body>
     <nav class="pageNav">
         <div class="navLeft" id="navLeftOrigenal">
-            <img src="assets/icons/menu-rounded.png" class="navIcon" alt="">
+            <img src="assets/icons/menu-rounded.png" class="navIcon menuIcon" alt="">
             <img src="assets/icons/search.png" class="navIcon" alt="">
             <h4 class="subject">Space & Cosmos</h4>
         </div>
+        <dic class="asideMenu_hidden" id="sideBar">
+            <div class="topSection">
+                <div class="barLink">
+                    <a href="">Homepage</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">World</a>
+                    <p>></p>
+                </div>           
+                <div class="barLink">
+                    <a href="">U.S.</a>
+                    <p>></p>
+                </div>                
+                <div class="barLink">
+                    <a href="">Politics</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Busines</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Opiniion</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Tech</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Science</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Health</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Sport</a>
+                    <p>></p>
+                </div>
+            </div>
+            <div class="middleSection">
+                <div class="barLink">
+                    <a href="">Arts</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Books</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Style</a>
+                    <p>></p>
+                </div>
+                <div class="barLink">
+                    <a href="">Food</a>
+                    <p>></p>
+                </div>
+                <a href="">Travel</a>
+                <a href="">Magazine</a>
+                <a href="">T Magazine</a>
+                <div class="barLink">
+                    <a href="">Real Estate</a>
+                    <p>></p>
+                </div>
+                <a href="">Obituaries</a>
+                <div class="barLink">
+                    <a href="">Video</a>
+                    <p>></p>
+                </div>
+                <a href="">The Upshot</a>
+            </div>
+            <div class="bottomSection">
+                <div class="barLink">
+                    <a href="">More</a>
+                    <p>></p>
+                </div>
+            </div>
+        </dic>
         <div class="hiddenLeftNav" id="navLeftReplace">
             <img src="assets/images/ny_times_logo_small_2.png" class="journalName" alt="">
         </div>
@@ -178,19 +259,79 @@
                 set of papers submitted to The Astrophysical Journal.
             </p>
         </section>
-        <section class="drawings">
+        <section class="explainingDrawings">
             <h3>The Theory of Inflation</h3>
             <p>
-                Astronomers have found evidence to support the theory of inflation, which explains how the universe expanded so uniformly and so quickly in the instant after the Big Bang 13.8 billion years ago.
+                Astronomers have found evidence to support the theory of inflation, which explains how the universe expanded so uniformly 
+                and so quickly in the instant after the Big Bang 13.8 billion years ago.
             </p>
-            <div class="explainInDrawing">
-                <img class="mainImage" src="assets/images/index.png" alt="">
-                
+            <div class="drawing">
+                <img class="mainImage" src="assets/images/index.png" alt="">              
             </div>
-            <p></p>
-            <div class="drawinSubtext">
+            <div class="topExplainBox">
+                <div class="textBlock">
+                    <h4>The Universe</h4>
+                    <p>
+                        is just under 14 billion years old. From our position in the Milky Way galaxy, we can observe a sphere that is now 
+                        about 92 billion light-years across. But there's a mystery. Wherever we look, the universe has an even temperature.
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Not enough time</h4>
+                    <p>
+                        The universe is not old enough for light to have traveled the vast distance from one side of the universe to the other, 
+                        and there has not been enough time for scattered patches of hot and cold to mix into an even temperature.
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Distant coffee</h4>
+                    <p>
+                        At a smaller scale, imagine using a telescope to look a mile in one direction. You see a coffee cup, and from the amount 
+                        of steam, you can estimate its temperature and how much it has cooled. 
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Coffee everywhere</h4>
+                    <p>
+                        Now turn around and look a mile in the other direction. You see a similar coffee cup, at exactly the same temperature. 
+                        Coincidence? Maybe. But if you see a similar cup in every direction, you might want to look for another explanation.
+                    </p>
+                </div>
+            </div>
+            <div class="bottomExplainBox">
+                <div class="textBlock">
+                    <h4>Still not enough time</h4>
+                    <p>
+                        There has not been enough time to carry coffee cups from place to place before they get cold. But if all the coffee cups 
+                        were somehow filled from a single coffee pot, all at the same time, that might explain their even temperature.
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Inflation</h4>
+                    <p>
+                        solves this problem. The theory proposes that, less than a trillionth of a second after the Big Bang, the universe expanded 
+                        faster than the speed of light. Tiny ripples in the violently expanding energy field eventually grew into the large-scale 
+                        structures of the universe.
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Fluctuation</h4>
+                    <p>
+                        Astronomers have now detected evidence of these ancient fluctuations in swirls of polarized light in the cosmic background 
+                        radiation, which is energy left over from the early universe. These are gravitational waves predicted by Einstein.
+                    </p>
+                </div>
+                <div class="textBlock">
+                    <h4>Expansion</h4>
+                    <p>
+                        Returning to our coffee, imagine a single, central pot expanding faster than light and cooling to an even temperature as it 
+                        expands. That is something like inflation. And the structure of the universe mirrors the froth and foam of the original pot.
+                    </p>
+                </div>
+            </div>
+            <div class="drawingSubtext">
                 <h5>
-                    By LARRY BUCHANAN and JONATHAN CORUM
+                    By <span>Larry Buchanan</span> and <span>Jonathan Corum</span>
                 </h5>
             </div>
         </section>
@@ -302,13 +443,13 @@
                 He has been there 23 times, he said, wintering over in 1994. “I’ve been hooked ever since,” he said.
             </p>
         </section>
-        <section>
-            <div>
+        <section class="photoBox">
+            <div class="photoInBetween">
                 <img src="assets/images/radar_3.jpg" alt="">
                 <p class="subText">
                     The Bicep2 telescope, in the foreground, was used to detect the faint spiraling gravity patterns 
                     — the signature of a universe being wrenched violently apart at its birth.
-                    <span>Steffen Richter/Associated Press</span>
+                    <span>&nbsp; Steffen Richter/Associated Press</span>
                 </p>
             </div>
         </section>
@@ -335,8 +476,290 @@
                 supercomputer, making sure they had things right and worrying that competitors might beat them to the 
                 breakthrough.
             </p>
+            <h2>
+                A Special Time
+            </h2>
+            <p class="textPart">
+                The data traced the onset of inflation to a time that physicists like Dr. Guth, staying up late in his 
+                Palo Alto house 35 years ago, suspected was a special break point in the evolution of the universe.
+            </p>
+            <p class="textPart">
+                Physicists recognize four forces at work in the world today: gravity, electromagnetism, and strong and 
+                weak nuclear forces. But they have long suspected that those are simply different manifestations of a 
+                single unified force that ruled the universe in its earliest, hottest moments.
+            </p>
+            <p class="textPart">
+                As the universe cooled, according to this theory, there was a fall from grace, like some old folk 
+                mythology of gods or brothers falling out with each other. The laws of physics evolved, with one force 
+                after another splitting away.
+            </p>
+            <p class="textPart">
+                That was where Dr. Guth came in.
+            </p>
+            <p class="textPart">
+                Under some circumstances, a glass of water can stay liquid as the temperature falls below 32 degrees, 
+                until it is disturbed, at which point it will rapidly freeze, releasing latent heat.
+            </p>
+            <p class="textPart">
+                Similarly, the universe could “supercool” and stay in a unified state too long. In that case, space 
+                itself would become imbued with a mysterious latent energy.
+            </p>
+            <p class="textPart">
+                Inserted into Einstein’s equations, the latent energy would act as a kind of antigravity, and the universe 
+                would blow itself up. Since it was space itself supplying the repulsive force, the more space was created, 
+                the harder it pushed apart.
+            </p>
+            <p class="textPart">
+                What would become our observable universe mushroomed in size at least a trillion trillionfold — from a 
+                submicroscopic speck of primordial energy to the size of a grapefruit — in less than a cosmic eye-blink.
+            </p>
+            <p class="textPart">
+                Almost as quickly, this pulse would subside, relaxing into ordinary particles and radiation. All of normal 
+                cosmic history was still ahead, resulting in today’s observable universe, a patch of sky and stars billions 
+                of light-years across. “It’s often said that there is no such thing as a free lunch,” Dr. Guth likes to say, 
+                “but the universe might be the ultimate free lunch.”
+            </p>
+            <p class="textPart">
+                Make that free lunches. Most of the hundred or so models resulting from Dr. Guth’s original vision suggest 
+                that inflation, once started, is eternal. Even as our own universe settled down to a comfortable homey expansion, 
+                the rest of the cosmos will continue blowing up, spinning off other bubbles endlessly, a concept known as the 
+                multiverse.
+            </p>
+            <p class="textPart">
+                So the future of the cosmos is perhaps bright and fecund, but do not bother asking about going any deeper into 
+                the past.
+            </p>
+            <p class="textPart">
+                We might never know what happened before inflation, at the very beginning, because inflation erases everything 
+                that came before it. All the chaos and randomness of the primordial moment are swept away, forever out of our 
+                view.
+            </p>
+            <p class="textPart">
+                “If you trace your cosmic roots,” said Abraham Loeb, a Harvard-Smithsonian astronomer who was not part of the 
+                team, “you wind up at inflation.”
+            </p>
         </section>
+        <footer class="articleFooter">
+            <div class="articlePrint">
+                <p class="subText">
+                    A version of this article appears in print on March 18, 2014, Section A, Page 1 of the New York edition 
+                    with the headline: Space Ripples Reveal Big Bang’s Smoking Gun. 
+                    <a href="">Order Reprints</a> |   
+                    <a href="">Today’s Paper</a> |
+                    <a href="">Subscribe</a>
+                </p>
+            </div>
+            <div class="commentsAndProfiles">
+                <input type="button" class="commentsBtn" value="Read 615 comments">
+                <div class="footerProfiles">
+                    <nav class="articleNav">
+                        <img src="assets/icons/facebook.png" class="madia" alt="">
+                        <img src="assets/icons/twitter.png" class="madia" alt="">
+                        <img src="assets/icons/envelope.png" class="madia" alt="">
+                        <img src="assets/icons/forward.png" class="madia" alt="">
+                    </nav>
+                </div>
+            </div>
+        </footer>
     </main>
+
+    <footer class="suggestionsFooter">
+        <section class="suggestionsLeft">
+            <div class="subjectSuggestions">
+                <a href="">
+                    <h3>
+                        More in Space and Astronomy
+                    </h3>
+                </a>
+                <div class="suggestionRow">
+                    <div class="suggestionBox">
+                        <img src="assets/images/Mars-Helicopters.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            JPL-Caltech/NASA
+                        </p>
+                        <p class="articleText">
+                            Mars Is About to Have Its ‘Wright Brothers Moment’
+                        </p>
+                        <p class="articleDate">
+                            june 23
+                        </p>
+                    </div>
+                    <div class="suggestionBox">
+                        <img src="assets/images/Outthere-Ligo.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Alex Andrix/Vigro/EGO
+                        </p>
+                        <p class="articleText">
+                            A Black Hole’s Lunch Provides a Treat for Astronomers
+                        </p>
+                        <p class="articleDate">
+                            june 25
+                        </p>
+                    </div>
+                    <div class="suggestionBox paidSuggestionBox">
+                        <img src="assets/images/Watch-museum.jpg" class="articlePic" alt="">
+                        <p class="picSubText paidPicSubText">
+                            PAID POST: Audemars Piguet
+                        </p>
+                        <p class="articleText paidSuggestion">
+                            Audemars Piguet's Spiraling new Watch Museum Opens It's Doors
+                        </p>
+                        <p class="articleDate paidArticleDate">
+
+                        </p>
+                    </div>
+                </div>
+                <div class="suggestionRow">
+                    <div class="suggestionBox">
+                        <img src="assets/images/Outthere-Xenon1.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Enrico Sacchetti/Science Source
+                        </p>
+                        <p class="articleText">
+                            Seeking Dark Matter, They Detected Another Mystery
+                        </p>
+                        <p class="articleDate">
+                            june 17
+                        </p>
+                    </div>
+                    <div class="suggestionBox">
+                        <img src="assets/images/Satellites1.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Jin Liwang/Xinhua, via Alamy Live News
+                        </p>
+                        <p class="articleText">
+                            China Reports Progress in Ultra-Secure Satellite Transmission
+                        </p>
+                        <p class="articleDate">
+                            june 15
+                        </p>
+                    </div>
+                    <div class="suggestionBox">
+                        <img src="assets/images/Viper.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Bridget Caswell, Alcyon Technical Services/NASA
+                        </p>
+                        <p class="articleText">
+                            NASA Needs to Find Ice on the Moon. This Rover Will Lead the Search.
+                        </p>
+                        <p class="articleDate">
+                            june 11
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="editorsSuggestions">
+                <a href="">
+                    <h3>
+                        Editors' Pick
+                    </h3>
+                </a>
+                <div class="suggestionRow">
+                    <div class="suggestionBox">
+                        <img src="assets/images/Lesbian-Tiktok1.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+
+                        </p>
+                        <p class="articleText">
+                            For Lesbians, TikTok Is ‘the Next Tinder’
+                        </p>
+                        <p class="articleDate">
+                            june 29
+                        </p>
+                    </div>
+                    <div class="suggestionBox">
+                        <img src="assets/images/Hawaiian-shirt.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Karen Ducey/Getty Images
+                        </p>
+                        <p class="articleText">
+                            What Do You Do When Extremism Comes for the Hawaiian Shirt?
+                        </p>
+                        <p class="articleDate">
+                            july 1
+                        </p>
+                    </div>
+                    <div class="suggestionBox">
+                        <img src="assets/images/Berkow-carew.jpg" class="articlePic" alt="">
+                        <p class="picSubText">
+                            Hannah Foslien/Getty Images
+                        </p>
+                        <p class="articleText">
+                            A Baseball Legend Wrestles With Removing His Former Boss’s Statue
+                        </p>
+                        <p class="articleDate">
+                            july 1
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="suggestionsRight">
+            <a href="" class="popularTitleLink">
+                <h3>
+                    Most Popular
+                </h3>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Opinion: Biden Should Not Debate Trump Unless …
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Sweden Has Become the World’s Cautionary Tale
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Mary Trump’s Book Accuses the President of Embracing ‘Cheating as a Way of Life’
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    The Inside Story of Why Mary Trump Wrote a Tell-All Memoir
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Case Against Amy Cooper Lacks Key Element: Victim’s Cooperation
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    In New Book, Trump’s Niece Describes Him as Still a Child, Seeking Attention
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    I’m a U.S. Citizen, Where in the World Can I Go?
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Artists and Writers Warn of an ‘Intolerant Climate.’ Reaction Is Swift.
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Opinion: How America Lost the War on Covid-19
+                </h2>
+            </a>
+            <a href="" class="popularLink">
+                <h2>
+                    Fauci Paints a Dire Picture
+                </h2>
+            </a>
+        </aside>
+    </footer>
+    <footer class="mainFooter">
+        <div class="footarNavTitle">
+            <img src="assets/images/ny_times_logo_small_2.png" alt="">
+        </div>
+        <nav>
+
+        </nav>
+    </footer>
 
     <script src="navSwitch.js"></script>
 </body>

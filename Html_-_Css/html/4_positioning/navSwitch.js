@@ -1,3 +1,26 @@
+/* ASIDE BAR - pop-up */
+let asideMenuBtn = document.querySelector(".menuIcon");
+
+let asideBar =  document.getElementById("sideBar");
+
+function showAside() {
+    
+    asideBar.classList.replace("asideMenu_hidden", "asideMenu_shown");
+
+}
+
+function hideAside() {
+    
+    asideBar.classList.replace("asideMenu_shown", "asideMenu_hidden");
+
+}
+
+asideMenuBtn.addEventListener('click', showAside);
+
+asideBar.addEventListener('mouseleave', hideAside);
+
+
+
 /* POP-UP NAV */
 /* Calculate height of image and set switchpoi nav at 2/3 of height */
 
@@ -73,7 +96,7 @@ function textShown() {
 
     console.log(numbers);
     
-    if (window.scrollY > (banner_One.offsetTop - 600) && window.scrollY < (banner_One.offsetTop - 150)) {
+    if (window.scrollY > (banner_One.offsetTop - 780) && window.scrollY < (banner_One.offsetTop + 40)) {
 
         textOverflowOne.classList.replace("textoverflow_hidden", "textoverflow_shown");
 
@@ -82,10 +105,10 @@ function textShown() {
         textOverflowOne.classList.replace("textoverflow_shown", "textoverflow_flowOut");
         setTimeout(function () {
             textOverflowOne.classList.replace("textoverflow_flowOut", "textoverflow_hidden");
-        }, 3000);
+        }, 2000);
     }
     
-    if (window.scrollY > (banner_Two.offsetTop - 600) && window.scrollY < (banner_Two.offsetTop - 150)) {
+    if (window.scrollY > (banner_Two.offsetTop - 800) && window.scrollY < (banner_Two.offsetTop)) {
 
         textOverflowTwo.classList.replace("textoverflow_hidden", "textoverflow_shown");
 
@@ -94,10 +117,10 @@ function textShown() {
         textOverflowTwo.classList.replace("textoverflow_shown", "textoverflow_flowOut");
         setTimeout(function () {
             textOverflowTwo.classList.replace("textoverflow_flowOut", "textoverflow_hidden");
-        }, 3000);
+        }, 2000);
     }
     
-    if (window.scrollY > (banner_Three.offsetTop - 600) && window.scrollY < (banner_Three.offsetTop - 150)) {
+    if (window.scrollY > (banner_Three.offsetTop - 780) && window.scrollY < (banner_Three.offsetTop + 40)) {
 
         textOverflowThree.classList.replace("textoverflow_hidden", "textoverflow_shown");
 
@@ -106,7 +129,7 @@ function textShown() {
         textOverflowThree.classList.replace("textoverflow_shown", "textoverflow_flowOut");
         setTimeout(function () {
             textOverflowThree.classList.replace("textoverflow_flowOut", "textoverflow_hidden");
-        }, 3000);
+        }, 2000);
     }
 };
 

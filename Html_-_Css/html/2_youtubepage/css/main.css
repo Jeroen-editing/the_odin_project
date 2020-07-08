@@ -674,13 +674,13 @@ nav form {
         margin-bottom: 18px; }
     .publisher-info .info-container table {
       display: block;
-      max-width: 630px;
+      width: 630px;
       margin-left: 0;
       padding: 0;
       text-align: left;
       line-height: 20px; }
       .publisher-info .info-container table th {
-        width: 120px;
+        width: 130px;
         color: #7a7a7a;
         font-weight: 400; }
       .publisher-info .info-container table thead th {
@@ -689,6 +689,8 @@ nav form {
       .publisher-info .info-container table tbody th,
       .publisher-info .info-container table tbody td {
         padding-top: 8px; }
+      .publisher-info .info-container table tbody td {
+        width: 370px; }
       .publisher-info .info-container table .license {
         vertical-align: top; }
 
