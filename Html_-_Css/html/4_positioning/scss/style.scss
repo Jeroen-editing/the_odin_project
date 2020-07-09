@@ -186,7 +186,6 @@ body, main {
         background: rgb(232, 232, 232);
         border-radius: 50%;
     }
-
     .bookmark,
     .chat {
         height: 30px;
@@ -260,7 +259,6 @@ header {
             flex-direction: row;
             justify-content: space-between;
         }
-
         a {
             width: 160px;
             padding: 4px 0 6px 0;
@@ -321,7 +319,6 @@ header {
             font-size: 12px;
             font-weight: 500;
         }
-
         .madia {
             height: 16px;
             width: 16px;
@@ -329,7 +326,6 @@ header {
             background: rgb(232, 232, 232);
             border-radius: 50%;
         }
-
         .bookmark,
         .chat {
             height: 30px;
@@ -401,7 +397,7 @@ header {
     }
 
     #textPopUpOne {
-        margin: -250px 0 0 700px;
+        margin: -220px 0 0 700px;
         .textoverflowTwo {
             text-align: right;
         }
@@ -415,6 +411,17 @@ header {
     #textPopUpThree {
         margin: -210px 0 0 500px;
         background: rgba(58, 58, 58, 0.4);
+    }
+
+    #textPopUpFour {
+        margin: -220px 0 0 640px;
+        background: rgba(58, 58, 58, 0.2);
+        .textoverflowOne {
+            margin-right: 14px;
+        }
+        .textoverflowTwo {
+            text-align: right;
+        }
     }
 
     .textoverflow_hidden {
@@ -479,7 +486,6 @@ header {
         font-size: 14px;
         font-weight: 800;
     }
-
     a {
         margin-top: 8px;
         color: rgb(45, 98, 133);
@@ -503,7 +509,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 960px;
+    width: 940px;
     height: 760px;
     margin: 32px auto;
 
@@ -523,7 +529,7 @@ header {
     .drawing {
         @include wider-grid();
         grid-template-areas: " . imageblock . ";
-        margin: 0 0 20px 10px;
+        margin-bottom: 20px;
 
         img {
             max-width: 940px;
@@ -539,13 +545,12 @@ header {
         justify-content: space-between;
         width: 960px;
         position: relative;
-        margin-left: 10px;
 
         .textBlock {
             display: inline-block;
             width: 235px;
             font-family: 'Libre Franklin', sans-serif;
-            line-height: 17px;
+            line-height: 16px;
 
             h4 {
                 display: inline;
@@ -564,7 +569,7 @@ header {
     }
 
     .topExplainBox {
-        margin-top: -430px;
+        margin-top: -450px;
     }
 
     .bottomExplainBox {
@@ -582,7 +587,7 @@ header {
 
     .drawingSubtext {
         display: block;
-        margin: 40px 0 0 10px;
+        margin-top: 40px;
 
         h5 {
             font-family: 'Libre Franklin', sans-serif;
@@ -690,7 +695,7 @@ header {
     }
 }
 
-.suggestionsFooter {
+.suggestionsSection {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -701,7 +706,6 @@ header {
         font-family: 'Libre Franklin', sans-serif;
         text-decoration: none;
     }
-
     h3 {
         font-family: 'Libre Franklin', sans-serif;
         font-size: 16px;
@@ -749,6 +753,7 @@ header {
                 width: 272px;
             }
             .picSubText {
+                height: 14px;
                 margin-top: 8px;
                 color: rgb(131, 131, 131);
                 font-family: 'Libre Franklin', sans-serif;
@@ -756,6 +761,7 @@ header {
                 text-align: right;
             }
             .articleText {
+                height: 66px;
                 margin: 6px 0 8px 0;
                 font-family: 'Averia Serif Libre', cursive;
                 font-size: 17px;
@@ -814,7 +820,7 @@ header {
 .mainFooter {
     width: 1200px;
     margin: 0 auto;
-    height: 600px;
+    /*height: 600px;*/
     border-top: 2px solid rgb(222, 222, 222);
 
     .footarNavTitle {
@@ -823,7 +829,185 @@ header {
 
         img {
             height: 38px;
-            margin: 4px 0 4px -6px;
+            margin: 4px 0 6px -6px;
+        }
+    }
+    .footerNav {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(222, 222, 222);
+
+        h3, a {
+            color: black;
+            font-family: 'Libre Franklin', sans-serif;
+            text-decoration: none;
+        }
+        h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+
+    .footerLeftNav {
+        display: inline-flex;
+        flex-direction: row;
+        width: 1000px;
+
+        .navRow {
+            display: inline-flex;
+            flex-direction: column;
+            width: 197px;
+        }
+        a {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+        .fifthFooterNav {
+            border-right: 1px solid rgb(222, 222, 222);
+        }
+    }
+    .footerRightNav {
+        display: inline-flex;
+        flex-direction: column;
+        width: 200px;
+
+        .topRightFooterNav,
+        .middleRightFooterNav,
+        .bottomRightFooterNav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topRightFooterNav {
+            margin-bottom: 14px;
+
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 8px;
+            }
+            img {
+                width: 14px;
+                height: 14px;
+            }
+            h2 {
+                margin-left: 8px;
+                font-size: 15px;
+            }
+        }
+        .middleRightFooterNav,
+        .bottomRightFooterNav {
+            padding: 4px 0;
+
+            a {
+                padding: 6px 0;
+                font-size: 10px;
+            }
+        }
+        .bottomRightFooterNav {
+            border-top: 1px solid rgb(222, 222, 222);
+        }
+    }
+}
+
+.legalFooter {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    color: rgb(131, 131, 131);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 11px;
+
+    .contactAndTerms {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 60px;
+        padding: 10px 80px 0 66px;
+    }
+    a {
+        color: black;
+        font-family: 'Libre Franklin', sans-serif;
+        text-decoration: none;
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 1700px) {
+
+    .pageNav {
+        display: grid;
+        grid-template-columns: auto 660px auto;
+        grid-template-areas: "leftNav brand rightNav";
+    }
+
+    .fullWidth {
+        #textPopUpOne {
+            margin: -170px 0 0 80px;
+            .textoverflowTwo {
+                text-align: right;
+            }
+        }
+
+        #textPopUpTwo {
+            margin: -120px 0 0 260px;
+        }
+
+        #textPopUpThree {
+            margin: -170px 0 0 40px;
+            .textoverflowTwo {
+                margin-left: 20px;
+            }
+        }
+
+        #textPopUpFour {
+            margin: -160px 0 0 240px;
+            .textoverflowOne {
+                margin-right: 14px;
+            }
+            .textoverflowTwo {
+                text-align: right;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1200px) {
+
+    .pageNav {
+        display: grid;
+        grid-template-columns: auto 400px auto;
+        grid-template-areas: "leftNav brand rightNav";
+    }
+
+    .fullWidth {
+        #textPopUpOne,
+        #textPopUpTwo,
+        #textPopUpThree,
+        #textPopUpFour {
+            font-size: 20px;
+        }
+        #textPopUpOne {
+            margin: -140px 0 0 100px;
+        }
+    
+        #textPopUpTwo {
+            margin: -100px 0 0 280px;
+        }
+    
+        #textPopUpThree {
+            margin: -140px 0 0 120px;
+        }
+    
+        #textPopUpFour {
+            margin: -130px 0 0 240px;
+            
         }
     }
 }

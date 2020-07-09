@@ -84,10 +84,12 @@ document.addEventListener('scroll', switchNav);
 let banner_One = document.querySelector(".bannerOne");
 let banner_Two = document.querySelector(".bannerTwo");
 let banner_Three = document.querySelector(".bannerThree");
+let banner_Four = document.querySelector(".bannerFour");
 
 let textOverflowOne = document.getElementById("textPopUpOne");
 let textOverflowTwo = document.getElementById("textPopUpTwo");
 let textOverflowThree = document.getElementById("textPopUpThree");
+let textOverflowFour = document.getElementById("textPopUpFour");
 
 function textShown() {
     let top = banner_Two.offsetTop - 600;
@@ -129,6 +131,18 @@ function textShown() {
         textOverflowThree.classList.replace("textoverflow_shown", "textoverflow_flowOut");
         setTimeout(function () {
             textOverflowThree.classList.replace("textoverflow_flowOut", "textoverflow_hidden");
+        }, 2000);
+    }
+
+    if (window.scrollY > (banner_Four.offsetTop - 780) && window.scrollY < (banner_Four.offsetTop + 40)) {
+
+        textOverflowFour.classList.replace("textoverflow_hidden", "textoverflow_shown");
+
+    } else {
+
+        textOverflowFour.classList.replace("textoverflow_shown", "textoverflow_flowOut");
+        setTimeout(function () {
+            textOverflowFour.classList.replace("textoverflow_flowOut", "textoverflow_hidden");
         }, 2000);
     }
 };

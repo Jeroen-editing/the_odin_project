@@ -312,7 +312,7 @@ header {
     border-bottom: 1px solid rgba(162, 162, 162, 0.6);
     box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.11), -1px -1px 2px rgba(50, 50, 50, 0.11), 2px 2px 3px rgba(60, 60, 60, 0.08), -2px -2px 3px rgba(60, 60, 60, 0.08), 3px 3px 4px rgba(70, 70, 70, 0.05), -3px -3px 4px rgba(70, 70, 70, 0.05); }
   .fullWidth #textPopUpOne {
-    margin: -250px 0 0 700px; }
+    margin: -220px 0 0 700px; }
     .fullWidth #textPopUpOne .textoverflowTwo {
       text-align: right; }
   .fullWidth #textPopUpTwo {
@@ -321,6 +321,13 @@ header {
   .fullWidth #textPopUpThree {
     margin: -210px 0 0 500px;
     background: rgba(58, 58, 58, 0.4); }
+  .fullWidth #textPopUpFour {
+    margin: -220px 0 0 640px;
+    background: rgba(58, 58, 58, 0.2); }
+    .fullWidth #textPopUpFour .textoverflowOne {
+      margin-right: 14px; }
+    .fullWidth #textPopUpFour .textoverflowTwo {
+      text-align: right; }
   .fullWidth .textoverflow_hidden {
     opacity: 0; }
   .fullWidth .textoverflow_shown {
@@ -383,7 +390,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 960px;
+  width: 940px;
   height: 760px;
   margin: 32px auto; }
   .explainingDrawings h3 {
@@ -399,7 +406,7 @@ header {
     display: grid;
     grid-template-columns: auto 1190px auto;
     grid-template-areas: " . imageblock . ";
-    margin: 0 0 20px 10px; }
+    margin-bottom: 20px; }
     .explainingDrawings .drawing img {
       max-width: 940px;
       height: 573px; }
@@ -410,14 +417,13 @@ header {
     align-content: flex-start;
     justify-content: space-between;
     width: 960px;
-    position: relative;
-    margin-left: 10px; }
+    position: relative; }
     .explainingDrawings .topExplainBox .textBlock,
     .explainingDrawings .bottomExplainBox .textBlock {
       display: inline-block;
       width: 235px;
       font-family: 'Libre Franklin', sans-serif;
-      line-height: 17px; }
+      line-height: 16px; }
       .explainingDrawings .topExplainBox .textBlock h4,
       .explainingDrawings .bottomExplainBox .textBlock h4 {
         display: inline;
@@ -432,7 +438,7 @@ header {
         font-weight: 400;
         line-height: 16px; }
   .explainingDrawings .topExplainBox {
-    margin-top: -430px; }
+    margin-top: -450px; }
   .explainingDrawings .bottomExplainBox {
     margin-top: 135px; }
   .explainingDrawings .drawingSubtext::before {
@@ -444,7 +450,7 @@ header {
     background-color: #000; }
   .explainingDrawings .drawingSubtext {
     display: block;
-    margin: 40px 0 0 10px; }
+    margin-top: 40px; }
     .explainingDrawings .drawingSubtext h5 {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 15px;
@@ -526,92 +532,94 @@ header {
       background: #e8e8e8;
       border-radius: 50%; }
 
-.suggestionsFooter {
+.suggestionsSection {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 42px; }
-  .suggestionsFooter a {
+  .suggestionsSection a {
     color: black;
     font-family: 'Libre Franklin', sans-serif;
     text-decoration: none; }
-  .suggestionsFooter h3 {
+  .suggestionsSection h3 {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 16px; }
-  .suggestionsFooter .suggestionsLeft {
+  .suggestionsSection .suggestionsLeft {
     width: 852px;
     margin-right: 14px;
     padding-top: 20px;
     border-top: 1px solid black; }
-  .suggestionsFooter .suggesionBox {
+  .suggestionsSection .suggesionBox {
     display: flex;
     flex-direction: column;
     align-content: space-between;
     justify-content: flex-start; }
-  .suggestionsFooter .subjectSuggestions,
-  .suggestionsFooter .editorsSuggestions {
+  .suggestionsSection .subjectSuggestions,
+  .suggestionsSection .editorsSuggestions {
     display: flex;
     flex-direction: column;
     align-content: space-between;
     justify-content: flex-start; }
-    .suggestionsFooter .subjectSuggestions .suggestionRow,
-    .suggestionsFooter .editorsSuggestions .suggestionRow {
+    .suggestionsSection .subjectSuggestions .suggestionRow,
+    .suggestionsSection .editorsSuggestions .suggestionRow {
       display: flex;
       flex-direction: row;
       align-content: flex-start;
       justify-content: space-between;
       min-height: 300px;
       margin: 20px 0 30px 0; }
-    .suggestionsFooter .subjectSuggestions .suggestionBox,
-    .suggestionsFooter .editorsSuggestions .suggestionBox {
+    .suggestionsSection .subjectSuggestions .suggestionBox,
+    .suggestionsSection .editorsSuggestions .suggestionBox {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-content: space-between;
       width: 272px;
       padding: 0; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox img,
-      .suggestionsFooter .editorsSuggestions .suggestionBox img {
+      .suggestionsSection .subjectSuggestions .suggestionBox img,
+      .suggestionsSection .editorsSuggestions .suggestionBox img {
         width: 272px; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox .picSubText,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .picSubText {
+      .suggestionsSection .subjectSuggestions .suggestionBox .picSubText,
+      .suggestionsSection .editorsSuggestions .suggestionBox .picSubText {
+        height: 14px;
         margin-top: 8px;
         color: #838383;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 9px;
         text-align: right; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox .articleText,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .articleText {
+      .suggestionsSection .subjectSuggestions .suggestionBox .articleText,
+      .suggestionsSection .editorsSuggestions .suggestionBox .articleText {
+        height: 66px;
         margin: 6px 0 8px 0;
         font-family: 'Averia Serif Libre', cursive;
         font-size: 17px;
         font-weight: 500; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox .paidPicSubText,
-      .suggestionsFooter .subjectSuggestions .suggestionBox .paidSuggestion,
-      .suggestionsFooter .subjectSuggestions .suggestionBox .paidArticleDate,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .paidPicSubText,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .paidSuggestion,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .paidArticleDate {
+      .suggestionsSection .subjectSuggestions .suggestionBox .paidPicSubText,
+      .suggestionsSection .subjectSuggestions .suggestionBox .paidSuggestion,
+      .suggestionsSection .subjectSuggestions .suggestionBox .paidArticleDate,
+      .suggestionsSection .editorsSuggestions .suggestionBox .paidPicSubText,
+      .suggestionsSection .editorsSuggestions .suggestionBox .paidSuggestion,
+      .suggestionsSection .editorsSuggestions .suggestionBox .paidArticleDate {
         padding: 0 10px;
         color: black;
         font-family: 'Libre Franklin', sans-serif;
         font-weight: 700;
         text-align: left; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox .paidSuggestion,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .paidSuggestion {
+      .suggestionsSection .subjectSuggestions .suggestionBox .paidSuggestion,
+      .suggestionsSection .editorsSuggestions .suggestionBox .paidSuggestion {
         font-size: 14px;
         line-height: 20px; }
-      .suggestionsFooter .subjectSuggestions .suggestionBox .articleDate,
-      .suggestionsFooter .editorsSuggestions .suggestionBox .articleDate {
+      .suggestionsSection .subjectSuggestions .suggestionBox .articleDate,
+      .suggestionsSection .editorsSuggestions .suggestionBox .articleDate {
         height: 20px;
         color: #838383;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 11px;
         text-transform: uppercase; }
-    .suggestionsFooter .subjectSuggestions .paidSuggestionBox,
-    .suggestionsFooter .editorsSuggestions .paidSuggestionBox {
+    .suggestionsSection .subjectSuggestions .paidSuggestionBox,
+    .suggestionsSection .editorsSuggestions .paidSuggestionBox {
       background: #f2f2f2; }
-  .suggestionsFooter .suggestionsRight {
+  .suggestionsSection .suggestionsRight {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -620,9 +628,9 @@ header {
     margin-left: 14px;
     padding-top: 20px;
     border-top: 1px solid black; }
-    .suggestionsFooter .suggestionsRight .popularTitleLink {
+    .suggestionsSection .suggestionsRight .popularTitleLink {
       height: 42px; }
-    .suggestionsFooter .suggestionsRight .popularLink {
+    .suggestionsSection .suggestionsRight .popularLink {
       padding: 12px 0;
       font-family: 'Abhaya Libre', cursive;
       font-size: 13px;
@@ -632,13 +640,132 @@ header {
 .mainFooter {
   width: 1200px;
   margin: 0 auto;
-  height: 600px;
+  /*height: 600px;*/
   border-top: 2px solid #dedede; }
   .mainFooter .footarNavTitle {
     margin-top: 1px;
     border-top: 1px solid #dedede; }
     .mainFooter .footarNavTitle img {
       height: 38px;
-      margin: 4px 0 4px -6px; }
+      margin: 4px 0 6px -6px; }
+  .mainFooter .footerNav {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dedede; }
+    .mainFooter .footerNav h3, .mainFooter .footerNav a {
+      color: black;
+      font-family: 'Libre Franklin', sans-serif;
+      text-decoration: none; }
+    .mainFooter .footerNav h3 {
+      font-size: 12px;
+      text-transform: uppercase; }
+  .mainFooter .footerLeftNav {
+    display: inline-flex;
+    flex-direction: row;
+    width: 1000px; }
+    .mainFooter .footerLeftNav .navRow {
+      display: inline-flex;
+      flex-direction: column;
+      width: 197px; }
+    .mainFooter .footerLeftNav a {
+      margin-top: 8px;
+      font-size: 13px; }
+    .mainFooter .footerLeftNav .fifthFooterNav {
+      border-right: 1px solid #dedede; }
+  .mainFooter .footerRightNav {
+    display: inline-flex;
+    flex-direction: column;
+    width: 200px; }
+    .mainFooter .footerRightNav .topRightFooterNav,
+    .mainFooter .footerRightNav .middleRightFooterNav,
+    .mainFooter .footerRightNav .bottomRightFooterNav {
+      display: flex;
+      flex-direction: column; }
+    .mainFooter .footerRightNav .topRightFooterNav {
+      margin-bottom: 14px; }
+      .mainFooter .footerRightNav .topRightFooterNav a {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 8px; }
+      .mainFooter .footerRightNav .topRightFooterNav img {
+        width: 14px;
+        height: 14px; }
+      .mainFooter .footerRightNav .topRightFooterNav h2 {
+        margin-left: 8px;
+        font-size: 15px; }
+    .mainFooter .footerRightNav .middleRightFooterNav,
+    .mainFooter .footerRightNav .bottomRightFooterNav {
+      padding: 4px 0; }
+      .mainFooter .footerRightNav .middleRightFooterNav a,
+      .mainFooter .footerRightNav .bottomRightFooterNav a {
+        padding: 6px 0;
+        font-size: 10px; }
+    .mainFooter .footerRightNav .bottomRightFooterNav {
+      border-top: 1px solid #dedede; }
+
+.legalFooter {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  color: #838383;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 11px; }
+  .legalFooter .contactAndTerms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 60px;
+    padding: 10px 80px 0 66px; }
+  .legalFooter a {
+    color: black;
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    font-size: 10px; }
+
+@media (max-width: 1700px) {
+  .pageNav {
+    display: grid;
+    grid-template-columns: auto 660px auto;
+    grid-template-areas: "leftNav brand rightNav"; }
+
+  .fullWidth #textPopUpOne {
+    margin: -170px 0 0 80px; }
+    .fullWidth #textPopUpOne .textoverflowTwo {
+      text-align: right; }
+  .fullWidth #textPopUpTwo {
+    margin: -120px 0 0 260px; }
+  .fullWidth #textPopUpThree {
+    margin: -170px 0 0 40px; }
+    .fullWidth #textPopUpThree .textoverflowTwo {
+      margin-left: 20px; }
+  .fullWidth #textPopUpFour {
+    margin: -160px 0 0 240px; }
+    .fullWidth #textPopUpFour .textoverflowOne {
+      margin-right: 14px; }
+    .fullWidth #textPopUpFour .textoverflowTwo {
+      text-align: right; } }
+@media (max-width: 1200px) {
+  .pageNav {
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    grid-template-areas: "leftNav brand rightNav"; }
+
+  .fullWidth #textPopUpOne,
+  .fullWidth #textPopUpTwo,
+  .fullWidth #textPopUpThree,
+  .fullWidth #textPopUpFour {
+    font-size: 20px; }
+  .fullWidth #textPopUpOne {
+    margin: -140px 0 0 100px; }
+  .fullWidth #textPopUpTwo {
+    margin: -100px 0 0 280px; }
+  .fullWidth #textPopUpThree {
+    margin: -140px 0 0 120px; }
+  .fullWidth #textPopUpFour {
+    margin: -130px 0 0 240px; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
