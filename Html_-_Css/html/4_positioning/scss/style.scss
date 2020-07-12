@@ -84,6 +84,12 @@ body, main {
         font-size: 13px;
         text-transform: uppercase;
     }
+    .subject_shown {
+        opacity: 1;
+    }
+    .subject_hidden {
+        animation: disapear 1.5s forwards;
+    }
 }
 
 .hiddenLeftNav {
@@ -142,6 +148,8 @@ body, main {
         font-family: 'Alegreya', serif;
     }
 }
+
+
 
 .navRight {
     margin-top: -4px;
@@ -944,6 +952,19 @@ header {
         display: grid;
         grid-template-columns: auto 660px auto;
         grid-template-areas: "leftNav brand rightNav";
+
+        .navLeft,
+        .replacedLeftNav {
+            @include basic-vertical-flex;
+            justify-content: flex-start;
+            margin-left: 5px;
+        }
+        .navRight,
+        .replacedRightNav {
+            @include basic-vertical-flex;
+            justify-content: flex-end;
+            margin-right: 35px;
+        }
     }
 
     .fullWidth {
@@ -978,12 +999,25 @@ header {
     
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
 
     .pageNav {
         display: grid;
-        grid-template-columns: auto 400px auto;
+        grid-template-columns: auto 440px auto;
         grid-template-areas: "leftNav brand rightNav";
+
+        .navLeft,
+        .replacedLeftNav {
+            @include basic-vertical-flex;
+            justify-content: flex-start;
+            margin-left: 5px;
+        }
+        .navRight,
+        .replacedRightNav {
+            @include basic-vertical-flex;
+            justify-content: flex-end;
+            margin-right: 35px;
+        }
     }
 
     .fullWidth {

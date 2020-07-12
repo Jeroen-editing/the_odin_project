@@ -84,6 +84,7 @@ function calculate() {
     console.log(typeof sum + sum);
     outputScreen.textContent = '';
     outputScreen.textContent = sum.toFixed(2).toString();
+    outputScreen.style.color = "rgb(141, 219, 72)"
 }
 
 function reseting() {
