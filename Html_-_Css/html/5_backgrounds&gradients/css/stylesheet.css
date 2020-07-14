@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 834px; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+header .topnav {
+  position: fixed;
+  top: 12px;
+  width: 96%;
+  margin: 0 auto; }
+  header .topnav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #6f6f6f; }
+    header .topnav ul li {
+      width: 10.75%;
+      border-left: 1px solid dimgray;
+      overflow: hidden; }
+      header .topnav ul li a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        color: #d8d7d7;
+        font-family: 'Dosis', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        text-decoration: none;
+        background: #202020;
+        background: linear-gradient(180deg, #202020 0%, #4f4f4f 48%, #a1a1a1 100%); }
+        header .topnav ul li a:hover {
+          background: rgba(0, 0, 0, 0.4); }
+    header .topnav ul .logoBox {
+      border-left: none; }
+      header .topnav ul .logoBox .logo {
+        padding: 5px 0; }
+        header .topnav ul .logoBox .logo img {
+          margin-top: 1px; }
+    header .topnav ul .searchBox {
+      width: 13%; }
+      header .topnav ul .searchBox a {
+        padding: 7px 0; }
+        header .topnav ul .searchBox a input {
+          width: 78%;
+          height: 17px;
+          outline: none;
+          border: none;
+          border-radius: 12px;
+          box-shadow: inset -1px 2px 1px black;
+          background: transparent url("../assets/icons/search.png");
+          background-size: 9px;
+          background-position: 4px 3px;
+          background-repeat: no-repeat; }
+
+/*# sourceMappingURL=stylesheet.css.map */
