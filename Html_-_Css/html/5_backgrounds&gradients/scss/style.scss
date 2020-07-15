@@ -90,12 +90,12 @@ header {
 
     .mainPhotoBox {
         display: block;
-
+        
         .mainPhoto {
-            width: 834px;
+            width: 100%;
+            height: auto;
         }
     }
-
     .titleBox {
         display: block;
         position: absolute;    
@@ -139,7 +139,6 @@ header {
 }
 
 .bottomSection {
-
     display: block;
     width: 834px;
     margin-top: -3px;
@@ -230,6 +229,31 @@ footer {
             }
         } 
     }
+
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 960px;
+        }
+
+        .titleBox {    
+            width: 960px;
+            margin-top: -496px;
+        }
+    }
+
+    .bottomSection {
+        width: 960px;
+    
+        .linkPhotoBox {
+            a {
+                width: 238px;
+
+                img {
+                    width: 238px;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1240px) {
@@ -252,48 +276,124 @@ footer {
             }
         } 
     }
+
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1240px;
+        }
+
+        .titleBox {    
+            width: 1240px;
+            margin-top: -712px;
+        }
+    }
+
+    .bottomSection {
+        width: 1240px;
+    
+        .linkPhotoBox {
+            a {
+                width: 308px;
+
+                img {
+                    width: 308px;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1440px) {
 
     body {
-        width: 1240px;
+        width: 1440px;
+        margin: 0 auto;
     }
 
     header {
-        width: 930px;
+        width: 980px;
         margin: 0 auto;
     }
     
     .topnav {
-        width: 930px;
+        width: 980px;
         
         ul {
             .searchBox {
                 width: 13.1%;
             }
         } 
+    }
+    
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1440px;
+        }
+
+        .titleBox {    
+            width: 1440px;
+            margin-top: -868px;
+        }
+    }
+
+    .bottomSection {
+        width: 1440px;
+    
+        .linkPhotoBox {
+            a {
+                width: 357px;
+
+                img {
+                    width: 357px;
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 1880px) {
 
     body {
-        width: 1240px;
+        width: 1440px;
     }
 
     header {
-        width: 930px;
+        width: 980px;
         margin: 0 auto;
     }
     
     .topnav {
-        width: 930px;
+        width: 980px;
         
         ul {
             .searchBox {
                 width: 13.1%;
             }
         } 
+    }
+
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1440px;
+        }
+
+        .titleBox {    
+            width: 1440px;
+            margin-top: -868px;
+        }
+    }
+
+    .bottomSection {
+        width: 1440px;
+    
+        .linkPhotoBox {
+            a {
+                width: 357px;
+
+                img {
+                    width: 357px;
+                }
+            }
+        }
     }
 }
