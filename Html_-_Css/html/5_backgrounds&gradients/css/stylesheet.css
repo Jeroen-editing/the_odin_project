@@ -3,7 +3,8 @@
   padding: 0; }
 
 body {
-  width: 834px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto; }
 
 header {
@@ -60,20 +61,29 @@ header {
           background-position: 4px 3px;
           background-repeat: no-repeat; }
 
+main {
+  width: 100%;
+  height: auto; }
+
 .topSection {
-  display: block;
-  margin-bottom: 0; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  max-height: 723px; }
   .topSection .mainPhotoBox {
-    display: block; }
+    display: block;
+    bottom: 0; }
     .topSection .mainPhotoBox .mainPhoto {
       width: 100%;
       height: auto; }
   .topSection .titleBox {
     display: block;
     position: absolute;
-    width: 834px;
-    height: 200px;
-    margin-top: -400px;
+    width: 100%;
+    max-width: 1440px;
+    height: 240px;
+    top: 200px;
     color: white;
     font-family: 'Roboto', sans-serif;
     text-align: center; }
@@ -103,16 +113,20 @@ header {
 
 .bottomSection {
   display: block;
-  width: 834px;
-  margin-top: -3px; }
+  padding-top: 1px; }
   .bottomSection .linkPhotoBox {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
     .bottomSection .linkPhotoBox a {
-      width: 206px; }
+      display: flex;
+      justify-content: center;
+      width: 24.75%;
+      height: 200px;
+      overflow-x: hidden; }
       .bottomSection .linkPhotoBox a img {
-        width: 206px; }
+        width: 364px;
+        height: 200px; }
 
 footer {
   display: flex;
@@ -149,106 +163,196 @@ footer {
 
 /* ---------------------------- RESPONSIVENESS ---------------------------- */
 /* ------------------------------------------------------------------------ */
+/* Fixed this easier, so no need for this code anymore */
+/*
 @media (min-width: 960px) {
-  body {
-    width: 960px; }
 
-  header {
-    width: 930px;
-    margin: 0 auto; }
+    body {
+        width: 960px;
+    }
 
-  .topnav {
-    width: 930px; }
-    .topnav ul .searchBox {
-      width: 13.1%; }
+    header {
+        width: 930px;
+        margin: 0 auto;
+    }
+    
+    .topnav {
+        width: 930px;
+        
+        ul {
+            .searchBox {
+                width: 13.1%;
+            }
+        } 
+    }
 
-  .topSection .mainPhotoBox .mainPhoto {
-    width: 960px; }
-  .topSection .titleBox {
-    width: 960px;
-    margin-top: -496px; }
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 960px;
+        }
 
-  .bottomSection {
-    width: 960px; }
-    .bottomSection .linkPhotoBox a {
-      width: 238px; }
-      .bottomSection .linkPhotoBox a img {
-        width: 238px; } }
+        .titleBox {    
+            width: 960px;
+            margin-top: -496px;
+        }
+    }
+
+    .bottomSection {
+        width: 960px;
+    
+        .linkPhotoBox {
+            a {
+                width: 238px;
+
+                img {
+                    width: 238px;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1240px) {
-  body {
-    width: 1240px; }
 
-  header {
-    width: 930px;
-    margin: 0 auto; }
+    body {
+        width: 1240px;
+    }
 
-  .topnav {
-    width: 930px; }
-    .topnav ul .searchBox {
-      width: 13.1%; }
+    header {
+        width: 930px;
+        margin: 0 auto;
+    }
+    
+    .topnav {
+        width: 930px;
+        
+        ul {
+            .searchBox {
+                width: 13.1%;
+            }
+        } 
+    }
 
-  .topSection .mainPhotoBox .mainPhoto {
-    width: 1240px; }
-  .topSection .titleBox {
-    width: 1240px;
-    margin-top: -712px; }
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1240px;
+        }
 
-  .bottomSection {
-    width: 1240px; }
-    .bottomSection .linkPhotoBox a {
-      width: 308px; }
-      .bottomSection .linkPhotoBox a img {
-        width: 308px; } }
+        .titleBox {    
+            width: 1240px;
+            margin-top: -712px;
+        }
+    }
+
+    .bottomSection {
+        width: 1240px;
+    
+        .linkPhotoBox {
+            a {
+                width: 308px;
+
+                img {
+                    width: 308px;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1440px) {
-  body {
-    width: 1440px;
-    margin: 0 auto; }
 
-  header {
-    width: 980px;
-    margin: 0 auto; }
+    body {
+        width: 1440px;
+        margin: 0 auto;
+    }
 
-  .topnav {
-    width: 980px; }
-    .topnav ul .searchBox {
-      width: 13.1%; }
+    header {
+        width: 980px;
+        margin: 0 auto;
+    }
+    
+    .topnav {
+        width: 980px;
+        
+        ul {
+            .searchBox {
+                width: 13.1%;
+            }
+        } 
+    }
+    
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1440px;
+        }
 
-  .topSection .mainPhotoBox .mainPhoto {
-    width: 1440px; }
-  .topSection .titleBox {
-    width: 1440px;
-    margin-top: -868px; }
+        .titleBox {    
+            width: 1440px;
+            margin-top: -868px;
+        }
+    }
 
-  .bottomSection {
-    width: 1440px; }
-    .bottomSection .linkPhotoBox a {
-      width: 357px; }
-      .bottomSection .linkPhotoBox a img {
-        width: 357px; } }
+    .bottomSection {
+        width: 1440px;
+    
+        .linkPhotoBox {
+            a {
+                width: 357px;
+
+                img {
+                    width: 357px;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1880px) {
-  body {
-    width: 1440px; }
 
-  header {
-    width: 980px;
-    margin: 0 auto; }
+    body {
+        width: 1440px;
+    }
 
-  .topnav {
-    width: 980px; }
-    .topnav ul .searchBox {
-      width: 13.1%; }
+    header {
+        width: 980px;
+        margin: 0 auto;
+    }
+    
+    .topnav {
+        width: 980px;
+        
+        ul {
+            .searchBox {
+                width: 13.1%;
+            }
+        } 
+    }
 
-  .topSection .mainPhotoBox .mainPhoto {
-    width: 1440px; }
-  .topSection .titleBox {
-    width: 1440px;
-    margin-top: -868px; }
+    .topSection {
+        .mainPhotoBox .mainPhoto {
+            width: 1440px;
+        }
 
-  .bottomSection {
-    width: 1440px; }
-    .bottomSection .linkPhotoBox a {
-      width: 357px; }
-      .bottomSection .linkPhotoBox a img {
-        width: 357px; } }
+        .titleBox {    
+            width: 1440px;
+            margin-top: -868px;
+        }
+    }
+
+    .bottomSection {
+        width: 1440px;
+    
+        .linkPhotoBox {
+            a {
+                width: 357px;
+
+                img {
+                    width: 357px;
+                }
+            }
+        }
+    }
+}
+*/
 
 /*# sourceMappingURL=stylesheet.css.map */
