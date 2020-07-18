@@ -1,0 +1,76 @@
+form, .output-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(191, 191, 191);
+    border: 1px solid darkslategray;
+}
+
+.output-container {
+    min-height: 260px;
+    color: green;
+    letter-spacing: -2px;
+    border-top: none;
+}
+
+.inputBox {
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+label {
+    width: 200px;
+    margin-right: 20px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid darkolivegreen;
+}
+
+input {
+    min-width: 100px;
+    border: 1px solid darkolivegreen;
+    border-radius: 6px;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+#submit {
+    padding: 2px 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgb(46, 95, 148);
+}
+
+#output p {
+    min-width: 458px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fizz,
+.buzz,
+.fizzbuzz {
+    letter-spacing: 0px;
+}
+
+.fizz {
+    color: rgb(136, 0, 0);
+}
+
+.buzz {
+    color: rgb(99, 79, 0);
+}
+
+.fizzbuzz {
+    color: rgb(0, 66, 136);
+    font-weight: 600;
+}
