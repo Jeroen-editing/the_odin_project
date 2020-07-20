@@ -21,30 +21,17 @@ function showNumber() {
 
     for (let index = 1; index <= number; index++) {
 
-        if (index%3 === 0 && index%5 === 0) {
+        if (index % 3 === 0 && index % 5 === 0) {
             output += fizzbuzz + ', </span>';
-        } else if (index%3 === 0) {
+        } else if (index % 3 === 0) {
             output += fizz + ', </span>';
-        } else if (index%5 === 0) {
+        } else if (index % 5 === 0) {
             output += buzz + ', </span>';
-        } else if (index < number) {
+        } else {
             output += '<em>' + index + ',</em> ';
         }
-        /*
-        if (index === number ) {
-            
-            if (index%3 === 0 && index%5 === 0) {
-                output += fizzbuzz + '.';
-            } else if (index%3 === 0) {
-                output += fizz + '.';
-            } else if (index%5 === 0) {
-                output += buzz + '.';
-            } else {
-                output += '<em>' + index + '.</em></p>';
-            }
-        }
-        */
-        if (index%10 === 0) {
+
+        if (index % 10 === 0) {
             output += '</p><p>'
         }
     }
