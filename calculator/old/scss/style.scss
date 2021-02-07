@@ -92,9 +92,7 @@ main {
         width: 460px;
         margin: 16px 0 18px 0;
     }
-    .operationBox {
-        display: flex;
-        justify-content: center;
+    .inputBox {
         height: 44px;
         background: rgb(0, 0, 0);
         border: 2px solid rgb(51, 58, 63);
@@ -102,14 +100,13 @@ main {
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
     }
-    .operation {
-        min-width: 440px;
+    .input {
+        min-width: 460px;
         height: 40px;
         padding: 4px 6px 2px 2px;
-        color: rgb(18, 116, 107);
         color: rgba(0, 225, 225, 0.8);
         font-family: 'Dosis', sans-serif;
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 300;
         letter-spacing: 2px;
         text-align: right;
@@ -121,9 +118,7 @@ main {
             margin: 0;
         } 
     }
-    .resultBox {
-        display: flex;
-        justify-content: center;
+    .outputBox {
         height: 44px;
         background: rgb(0, 0, 0);
         border: 2px solid rgb(51, 58, 63);
@@ -131,14 +126,14 @@ main {
         border-bottom-right-radius: 8px;
         border-bottom-left-radius: 8px;     
     }
-    .result {
-        width: 440px;
+    .output {
+        width: 460px;
         height: 40px;
-        padding: 4px 6px 2px 2px;
-        color: rgb(194, 133, 0);
+        padding: 5px 5px;
+        color: rgba(49, 104, 1, 0.4);
         font-family: 'Dosis', sans-serif;
-        font-size: 26px;
-        font-weight: 400;
+        font-size: 24px;
+        font-weight: 300;
         letter-spacing: 2px;
         text-align: right;
     }
@@ -158,7 +153,7 @@ main {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 
-    .buttonRow {
+    .buttonRows {
         display: flex;
         justify-items: center;
     }
@@ -292,15 +287,12 @@ main {
             background: rgb(36, 92, 3);
         }
     }
-    .calculate {
-        
+    .result {
         background: rgb(194, 133, 0);
         p {
-            color: black;
-            font-family: 'Russo One', sans-serif;
-            margin-top: -1px;
+            margin-top: -9px;
             font-size: 52px;
-            font-weight: 500;
+            font-weight: 300;
         }
         &:hover {
             background: rgb(36, 92, 3);

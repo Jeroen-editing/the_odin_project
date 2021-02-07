@@ -85,47 +85,42 @@ main {
   .topMachine .screen {
     width: 460px;
     margin: 16px 0 18px 0; }
-  .topMachine .operationBox {
-    display: flex;
-    justify-content: center;
+  .topMachine .inputBox {
     height: 44px;
     background: black;
     border: 2px solid #333a3f;
     border-bottom: none;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px; }
-  .topMachine .operation {
-    min-width: 440px;
+  .topMachine .input {
+    min-width: 460px;
     height: 40px;
     padding: 4px 6px 2px 2px;
-    color: #12746b;
     color: rgba(0, 225, 225, 0.8);
     font-family: 'Dosis', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 300;
     letter-spacing: 2px;
     text-align: right;
     background: none; }
-    .topMachine .operation::-webkit-outer-spin-button, .topMachine .operation::-webkit-inner-spin-button {
+    .topMachine .input::-webkit-outer-spin-button, .topMachine .input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0; }
-  .topMachine .resultBox {
-    display: flex;
-    justify-content: center;
+  .topMachine .outputBox {
     height: 44px;
     background: black;
     border: 2px solid #333a3f;
     border-top: none;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px; }
-  .topMachine .result {
-    width: 440px;
+  .topMachine .output {
+    width: 460px;
     height: 40px;
-    padding: 4px 6px 2px 2px;
-    color: #c28500;
+    padding: 5px 5px;
+    color: rgba(49, 104, 1, 0.4);
     font-family: 'Dosis', sans-serif;
-    font-size: 26px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 300;
     letter-spacing: 2px;
     text-align: right; }
 
@@ -143,7 +138,7 @@ main {
   border-top: none;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px; }
-  .keyboard .buttonRow {
+  .keyboard .buttonRows {
     display: flex;
     justify-items: center; }
   .keyboard .square {
@@ -260,15 +255,13 @@ main {
     .keyboard .substraction:hover,
     .keyboard .addition:hover {
       background: #245c03; }
-  .keyboard .calculate {
+  .keyboard .result {
     background: #c28500; }
-    .keyboard .calculate p {
-      color: black;
-      font-family: 'Russo One', sans-serif;
-      margin-top: -1px;
+    .keyboard .result p {
+      margin-top: -9px;
       font-size: 52px;
-      font-weight: 500; }
-    .keyboard .calculate:hover {
+      font-weight: 300; }
+    .keyboard .result:hover {
       background: #245c03; }
   .keyboard .procentage,
   .keyboard .brackets,

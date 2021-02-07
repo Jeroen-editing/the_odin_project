@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1280px;
+    //height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: #dadada;
+}
+
+.text {
+    width: 420px;
+    top: 0;
+
+    p {
+        width: 380px;
+        padding: 24px 12px;
+        color: rgb(0, 0, 0);
+        font-family: 'Exo 2', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-align: center;
+
+        span {
+            color: rgb(136, 136, 136);
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+.titleSection {
+    min-width: 420px;
+    margin: 0 auto;
+    display: block;
+}
+.titleBox {
+    min-width: 420px;
+    padding: 20px 0 22px 0;
+    margin: 0 auto;
+    flex-direction: column;
+    align-content: space-between;
+    background: rgb(130, 150, 150);
+    border: 2px solid rgb(51, 58, 63);
+
+    h1 {
+        color: rgb(51, 58, 63);
+        font-family: 'Audiowide', sans-serif;
+        font-size: 50px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-shadow: 1px 1px 0 rgb(196, 148, 65);
+    }
+    .lineUnderTitle {
+        height: 4px;
+        width: 319px;
+        margin: 4px auto;
+        background: rgb(51, 58, 63);
+        box-shadow:  1px 1px 0 rgb(196, 148, 65);
+    }
+}
+main {
+    display: block;
+}
+.mainSection {
+    width: 420px;
+    padding: 40px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: rgb(179, 179, 179);
+    border: 2px solid rgb(51, 58, 63);
+    border-top: none;
+}
+.machine {
+    width: 356px;
+    height: 512px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px;
+}
+.topMachine {
+    min-width: 350px;
+    min-height: 124px;   
+    display: flex;   
+    flex-direction: column;  
+    align-content: space-around;  
+    align-items: center;   
+    justify-items: center;   
+    background: rgb(92, 134, 139);   
+    border: 2px solid rgb(51, 58, 63);   
+    border-bottom-width: 4px;   
+    border-bottom: none;   
+    border-top-left-radius: 12px;    
+    border-top-right-radius: 12px;
+
+    .screen {
+        width: 323px;
+        margin: 16px 0 18px 0;
+    }
+}
+                
+
+                
+                    .inputBox {
+                        height: 38px;
+                        display: flex;
+                        background: rgb(0, 0, 0);
+                        border: 2px solid rgb(51, 58, 63);
+                        border-radius: 8px;
+
+                        .operation {
+                            width: 70px;
+                            height: 38px;
+                            margin-left: 1px;
+                            padding: 1px 2px 0 2px;
+                            color: rgba(201, 96, 4, 0.8);
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 26px;
+                            text-align: center;
+                            border-right: 2px solid rgba(51, 58, 63, 0.858);
+                        }
+                        .input {
+                            min-width: 222px;
+                            height: 36px;
+                            padding: 4px 6px 2px 2px;
+                            color: rgba(0, 225, 225, 0.8);
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 22px;
+                            font-weight: 300;
+                            letter-spacing: 2px;
+                            text-align: right;
+                            background: none;
+                            border: none;
+
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .outputBox {
+                        height: 40px;
+                        background: rgb(0, 0, 0);
+                        border: 2px solid rgb(51, 58, 63);
+                        border-radius: 8px;
+
+                        .output {
+                            width: 300px;
+                            height: 30px;
+                            padding: 5px 5px;
+                            color: rgba(49, 104, 1, 0.4);
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 24px;
+                            font-weight: 300;
+                            letter-spacing: 2px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .keyboard {
+                min-width: 350px;
+                min-height: 320px;
+                padding: 22px 0 22px 0;
+                margin-bottom: -8px;
+                display: flex;
+                flex-direction: column;
+                align-content: space-around;
+                align-items: center;
+                justify-items: center;
+                background: rgb(130, 150, 150);
+                border: 2px solid rgb(51, 58, 63);
+                border-top: none;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+
+                .buttonRows {
+                    display: flex;
+                    justify-items: center;
+
+                    .square {
+                        box-sizing: border-box;
+                        width: 60px;
+                        height: 60px;
+                        margin: 3px 3px;
+                        background-color: rgb(169, 169, 169);
+                        border: 1px solid rgb(51, 58, 63);
+                        border-radius: 6px;
+
+                        p {
+                            margin: 5px 0 0 0;
+                            color: black;
+                            font-family: 'Russo One', sans-serif;
+                            font-size: 42px;
+                            text-align: center;
+                        }
+                        &:hover {
+                            background: rgba(168, 122, 0, 0.6);
+                        }
+                        .special {
+                            color: white;
+                            font-family: 'Exo 2', sans-serif;
+                            text-shadow: none;
+                        }
+                    }
+                    .largeSquare {
+                        box-sizing: border-box;
+                        width: 126px;
+                        height: 60px;
+                        margin: 3px 3px;
+                        background-color: rgb(169, 169, 169);
+                        border: 1px solid rgb(51, 58, 63);
+                        border-radius: 8px;
+
+                        p {
+                            margin: 6px 0 0 0;
+                            color: black;
+                            font-family: 'Russo One', sans-serif;
+                            font-size: 40px;
+                            text-align: center;
+                        }
+                        &:hover {
+                            background: rgba(168, 122, 0, 0.6);
+                        }
+                    }
+                    .modulus,
+                    .procentage,
+                    .power,
+                    .root {
+                        display: flex;
+                        justify-content: space-evenly;
+                        background: rgb(117, 39, 13);
+                        border-color: rgb(51, 58, 63);
+
+                        &:hover {
+                            background: rgb(36, 92, 3);
+                        }
+                        p {
+                            font-size: 33px;
+                            font-weight: 100;
+                        }
+                        .mod {
+                            margin-top: 22px;
+                            font-size: 22px;
+                            font-weight: 300;
+                            letter-spacing: -1px;
+                        }
+                        .roundOne {
+                            margin: 0 0 0 2px;
+                            font-weight: 300;
+                        }
+                        .slashTwo {
+                            margin: 2px -13px 0 -14px;
+                            font-size: 38px;
+                            font-weight: 300;
+                        }
+                        .roundTwo {
+                            margin: 19px 0 0 0;
+                            font-weight: 300;
+                        }
+                        .powerX {
+                            margin: 8px 0 0 4px;
+                            font-size: 36px;
+                            font-weight: 300;
+                        }
+                        .powerY {
+                            margin: 1px 0 0 -11px;
+                            font-size: 18px;
+                        }
+                        .rootY {
+                            margin: 2px 0 0 4px;
+                            font-size: 18px;
+                        }
+                        .rootSymbol {
+                            margin: 5px 0 0 -20px;
+                            height: 42px;
+                            width: 34px;
+                        }
+                        .rootX {
+                            margin: 14px 0 0 -22px;
+                            font-size: 32px;
+                            font-weight: 300;
+                        }
+                    }
+                    .brackets,
+                    .plusMinus {
+                        display: flex;
+                        justify-content: space-evenly;
+                        background: rgb(10, 102, 143);
+                        border-color: rgb(51, 58, 63);
+
+                        p {
+                            font-size: 30px;
+                            font-weight: 100;
+                        }
+                        &:hover {
+                            /*background: rgb(36, 92, 3);*/
+                            background: rgb(10, 102, 143);
+                        }
+                        .openBracket,
+                        .closeBracket {
+                            font-size: 28px;
+                            margin-top: 9px;
+                            font-weight: 600;
+                        }
+                        .plus {
+                            margin: -2px 0 0 2px;
+                            font-weight: 400;
+                        }
+                        .slashOne {
+                            margin: 2px -10px 0 -13px;
+                            font-size: 36px;
+                            font-weight: 300;
+                        }
+                        .min {
+                            margin: 14px 0 0 -4px;
+                            font-size: 34px;
+                            font-weight: 400;
+                        }
+                    }
+                    .division,
+                    .multiplication,
+                    .substraction,
+                    .addition {
+                        background: rgb(0, 114, 78);
+                        border-color: rgb(51, 58, 63)
+                        p {
+                            margin-top: -9px;
+                            font-size: 52px;
+                            font-weight: 300;
+                        }
+                        &:hover {
+                            background: rgb(36, 92, 3);
+                        }
+                    }
+                    .ace,
+                    .result {
+                        background: rgb(184, 133, 2);
+                        border-color: rgb(51, 58, 63);
+
+                        &:hover {
+                            background: rgb(36, 92, 3);
+                        }
+                        .equal {
+                            margin-top: -9px;
+                            font-size: 53px;
+                            font-weight: 500;
+                        }
+                        .aAndc{
+                            margin-top: 10px;
+                            font-size: 33px;
+                            font-weight: 300;
+                            letter-spacing: -1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyrightsSection {
+    width: 424px;
+    margin: 0 auto;
+    display: block;
+
+    .copyAndRights {
+        min-width: 420px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        background: rgb(130, 150, 150);
+        border: 2px solid rgb(51, 58, 63);
+        border-top: none;
+
+        .copy_rights {
+            height: 34px;
+            width: 400px;
+            display: flex;
+            justify-items: center;
+            justify-content: space-evenly;
+            padding-top: 10px;
+            color: rgb(51, 58, 63);
+            font-family: 'Dosis', sans-serif;
+            font-weight: 600;
+            text-shadow: 1px 1px 1px rgb(196, 148, 65);
+
+            .dot {
+                margin: 4px -2px 0 -2px;
+                font-size: 12px;
+            }
+            .copy {
+                margin: -1px -2px 0 -2px;
+                color: rgb(51, 58, 63);
+                font-size: 18px;
+                font-weight: 800;
+            }
+            .fullDate {
+                font-family: 'Dosis', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .name {
+                position: relative;
+                display: inline-block;
+                color: #2e3d7c;
+                font-family: 'Dosis', sans-serif;
+                font-weight: 600;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                word-spacing: -1px;
+                text-shadow: 1px 1px 1px rgb(196, 148, 65);
+
+                .tooltiptext {
+                    visibility: visible;
+                    position: absolute;
+                    opacity: 0;
+                    width: 180px;
+                    bottom: 100%;
+                    left: 20%;
+                    margin: 0 0 4px -90px;
+                    padding: 5px;
+                    color: rgb(51, 58, 63);
+                    font-family: 'Dosis', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    text-shadow: 1px 1px 1px #c2c2c2;
+                    background-color: rgb(170, 160, 100);
+                    border: 2px solid rgb(51, 58, 63);
+                    border-radius: 6px;
+                    z-index: 10;
+                }
+                &:hover {
+                    color: #5f1601;
+                }
+                .visible {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .arrow {
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    top: 33px;
+                    left: 47%;
+                    display: block;
+                    background: rgb(170, 160, 100);
+                    border-right: 2px solid rgb(51, 58, 63);
+                    border-bottom: 2px solid rgb(51, 58, 63);
+                    transform: translateY(-55%) rotate(45deg);
+                }
+            }
+            .loginHour {
+                .time {
+                    margin: 0 1px;
+                    color: rgb(51, 58, 63);
+                    font-family: 'Dosis', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    display: inline;
+                }
+            }
+        }
+    }
+}

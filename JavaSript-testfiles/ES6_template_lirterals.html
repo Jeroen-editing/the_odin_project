@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .text-warning {
+            color: black;
+            font-size: 20px;
+            line-height: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="outputList">
+        
+    </ul>
+
+    <script>
+        const output = document.getElementById("outputList");
+
+        const result = {
+            success: ["max-length", "no-amd", "prefer-arrow-functions"],
+            failure: ["no-var", "var-on-top", "linebreak"],
+            skipped: ["id-blacklist", "no-dup-keys"]
+            };
+            
+        function makeList(arr) {
+            "use strict";
+
+            // Make another loop here to go over properties and then arr.prop.map....
+
+            const resultDisplayArray = arr.map(item => `<li class="text-warning">${item}</li>`);
+
+            return resultDisplayArray;
+        }
+
+        const resultDisplayArray = `<h3>Success:</h3><ul class="text-warning">${makeList(result.success)}</ul>
+                                    <h3>Failure:</h3><ul class="text-warning">${makeList(result.failure)}</ul>
+                                    <h3>Skipped:</h3><ul class="text-warning">${makeList(result.skipped)}</ul>`;
+        output.innerHTML = resultDisplayArray;
+        console.log(resultDisplayArray);
+
+    </script>
+</body>
+</html>
