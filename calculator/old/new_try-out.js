@@ -4,12 +4,10 @@ const outputScreen = document.getElementById('output');
 const inputScreen = document.getElementById('input');
 
 const keyboard = document.querySelector('.keyboard');
-
 const figures = keyboard.querySelectorAll('.figure');
 const operators = keyboard.querySelectorAll('.operator');
 
 const result = keyboard.querySelector('.equal');
-
 const reset = keyboard.querySelector('.reset');
 
 let number;
