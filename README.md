@@ -3,12 +3,12 @@ course excersises and projects
 
 ### Html & Css (Sass)
 
-##### 1) multipage website:
+#### 1) multipage website:
 https://jeroen-editing.github.io/the_odin_project/Html&Css/1_multipage/index.html
 
 ### JavaSript 
 
-##### 1) the calculator:
+#### 1) the calculator:
 simple version:
 https://jeroen-editing.github.io/the_odin_project/calculator/old/index.html
 
