@@ -1,7 +1,11 @@
 # the_odin_project
 course excersises and projects
 
-the calculator:
+### the calculator:
+simple version:
+https://jeroen-editing.github.io/the_odin_project/calculator/old/index.html
+
+scientific version:
 https://jeroen-editing.github.io/the_odin_project/calculator/index.html
 
 multipage website:
