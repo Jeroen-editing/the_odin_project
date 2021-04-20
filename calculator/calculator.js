@@ -98,14 +98,14 @@ let calculator_buttons = [
         class: "square brackets"
     },
     {   name : "square power",
-        symbol : "POWER(,2)",
+        symbol : "x<span>2</span>",
         text : '<p class="special powerX">x</p><p class="special powerY">2</p>',
         formula : "Math.pow(,2)",
         type : "math_function",
         class: "square powerOfTwo"
     },
     {   name : "power",
-        symbol : "POWER()",
+        symbol : "x<span>y</span>",
         text : '<p class="special powerX">x</p><p class="special powerY">y</p',
         formula : "Math.pow()",
         type : "math_function",
@@ -147,14 +147,14 @@ let calculator_buttons = [
         class: "square brackets"
     },
     {   name : "square-root",
-        symbol : "√",
+        symbol : "√2",
         text : `<p class="special rootY">2</p><img class="special rootSymbol" src="icons/square-root-3.png" alt=""><p class="special rootX">x</p>`,
         formula : "Math.sqrt(2)",
         type : "math_function",
         class: "square root" 
     },
     {   name : "root",
-        symbol : "√y",
+        symbol : "√<span>y</span>",
         text : `<p class="special rootY">y</p><img class="special rootSymbol" src="icons/square-root-3.png" alt=""><p class="special rootX">x</p>`,
         formula : "x * 1/y",
         type : "number",
@@ -197,33 +197,39 @@ let calculator_buttons = [
         class : "square plusMinus"
     }
 ];
+
+//const keyboard_element = document.getElementById("keyboard");
+//const output_operation_element = document.getElementById("operation");
+//const output_formula_element = document.getElementById("result");
+
+const input_element = document.querySelector(".input");
+const output_operation_element = document.querySelector(".operation .value");
+const output_formula_element = document.querySelector(".formaula .value");
+
 let data = {
     operation : [],
     result : [],
+    formula : []
 };
 
-const keyboard_element = document.getElementById("keyboard");
-const output_operation_element = document.getElementById("operation");
-const output_formula_element = document.getElementById("result");
+function createCalculatorButtons(){
+    const btns_per_row = 7;
+    let added_btns = 0;
 
-const btns_per_row = 7;
-let added_btns = 0;
+    calculator_buttons.forEach(button => {          
+        if (added_btns % btns_per_row == 0){     
+            input_element.innerHTML += `<div class="buttonRow"></div>`
+        } 
+        const row  = document.querySelector(".buttonRow:last-child");
+        row.innerHTML += `<button class="${button.class}" id="${button.name}">${button.symbol}</button>`;
 
-   
-calculator_buttons.forEach(button => {
-        
-    if (added_btns % btns_per_row == 0){     
-        keyboard_element.innerHTML += `<div class="buttonRow"></div>`
-    } 
-    const row  = document.querySelector(".buttonRow:last-child");
-    row.innerHTML += `<button class="${button.class}" id="${button.name}">${button.text}</button>`;
+        added_btns++; 
+    });
+}
+createCalculatorButtons();
 
-    added_btns++; 
-});
-
-keyboard_element.addEventListener('click', event => {
-
-    const target_btn = event.target.parentElement;
+input_element.addEventListener('click', event => {
+    const target_btn = event.target;
 
     calculator_buttons.forEach(button => {
         if(button.name == target_btn.id) calculator(button);
@@ -231,8 +237,7 @@ keyboard_element.addEventListener('click', event => {
     console.log(target_btn);
 });
 
-const calculator = (button) => {
-
+function calculator(button) {
     if (button.type == "operator") {
         data.operation.push(button.symbol);
         data.formula.push(button.formula);
@@ -240,11 +245,12 @@ const calculator = (button) => {
     else if (button.type == "number") {
         data.operation.push(button.symbol);
         data.formula.push(button.formula);
-    } 
+    }
+    /*
     else if (button.type == "math_function") {
 
-
     }
+    */
     else if (button.type == "key") {
 
         if (button.name == "clear") {
@@ -259,7 +265,8 @@ const calculator = (button) => {
     }
     else if (button.type == "calculate") {
 
-        let result_joined = data.result.join('');
+        let result_joined = data.formula.join('');
+        console.log(data.formula);
 
         data.operation = [];
         data.formula = [];
@@ -283,12 +290,13 @@ const calculator = (button) => {
         data.formula.push(result_final);
 
         updateOutputFormula(result_final);
+
+        return;
     }
-    
     updateOutputOperation(data.operation.join(''));
 
-    console.log(data.operation);
-    console.log(data.formula);
+    //console.log(data.operation);
+    //console.log(data.formula);
 }
 
 function updateOutputOperation(operation) {
@@ -333,13 +341,10 @@ function formatResult(result) {
 }
 
 
-
-
 const POWER = "POWER(";
 let POWER_SEARCH_RESULT = search(data.formula, POWER);
 
 function search(array, keyword) {
-    
     let result_array = [];
 
     array.forEach((element, index) => {
@@ -349,7 +354,6 @@ function search(array, keyword) {
 }
 
 function powerBaseGetter() {
-
     let power_bases = [];
 
     for(let i = 0; i < POWER_SEARCH_RESULT.length; i++) {
@@ -387,7 +391,6 @@ for(let i = 0; i < BASES.length; i++) {
 
     formula_str = formula_str.replace(toReplace, replacement);
 }
-
 
 
 const FACTORIAL = "factorial";
@@ -436,7 +439,7 @@ function factorialNumberGetter() {
         toReplace : toReplace,
         replacement : replacement
     });
-    let factorial_sequence = 0;
+    //let factorial_sequence = 0;
     return factorial_numbers;
 }
 
