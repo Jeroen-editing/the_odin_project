@@ -25,7 +25,10 @@ https://jeroen-editing.github.io/the_odin_project/Html&Css/6_responsiveness/inde
 
 ### JavaSript
 
-#### 1) the calculator:
+#### 1) Rock Paper Scissors - Game
+https://jeroen-editing.github.io/Rock_Paper_Scissors/index.html.
+
+#### 2) the calculator:
 simple version:
 https://jeroen-editing.github.io/the_odin_project/calculator/old/index.html
 
