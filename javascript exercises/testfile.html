@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Odin Project - Javascript ex</title>
+
+    <link href="testfileStyle.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aladin|Eagle+Lake|Julee|Kavivanar&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+    <table id="tableHead">
+        <tr>
+            <th class="title"></th><th id="tableTitle">Gradentabel C° / F° - F° / C°</th><th class="title"></th>
+        </tr>
+    </table>
+    <table id="gradeTable">
+
+    </table>
+
+    <script>
+        /*
+
+        // ex remove from array
+
+        const removeFromArray = function(...Args) {
+
+            let list = Args[0];
+            let newList = [];
+
+            list.forEach((item) => {
+
+                if (!Args.includes(item)) {
+
+                    newList.push(item);
+
+                }
+            });
+            return newList;
+        };
+
+        console.log(removeFromArray(["hey",2,3,"ho"],"hey",3));
+
+
+        //ex sum of all numbers between 2 given numbers
+
+        const sumAll = function(firstNumber, secondNumber) {
+
+            let firstInput = prompt("Give a number: ", "");
+            let secondInput = prompt("Give a second number: ", "");
+
+            firstNumber = +(firstInput);
+            secondNumber = +(secondInput);
+
+            let sumOfAll = 0;
+
+            console.log(firstNumber + ' | ' + secondNumber);
+
+            if (firstNumber < 0 || secondNumber < 0) return "ERROR";
+            if (typeof firstNumber !== "number" || typeof secondNumber !== "number") return "ERROR";
+
+            if (firstNumber > secondNumber) {
+
+                let numberSwitch = secondNumber;
+                secondNumber = firstNumber;
+                firstNumber = numberSwitch;
+            }
+
+            while (firstNumber <= secondNumber) {
+16041604
+                sumOfAll += firstNumber;
+                firstNumber++;
+            }
+
+            console.log(sumOfAll);
+
+        };
+
+        sumAll();
+
+        // ex calculate if it's a leap year
+
+        const leapYears = function(givenYear) {
+
+            givenYear = +(prompt("Give the year you wanne check, if it's a leap year or not: ", ''));
+
+            console.log(givenYear + ' | ' + typeof givenYear);
+
+            if (givenYear % 4 === 0 && givenYear % 100 !== 0) {
+                console.log("yes: " + givenYear);
+
+            } else if (givenYear % 400 === 0) {
+                console.log(givenYear + " is a leap year.");
+
+            } else {
+                console.log(givenYear + " is no leap year.");
+            }
+        };
+        leapYears();
+        */
+
+        let makeTabel = document.getElementById("gradeTable");
+        makeTabel.innerHTML = "<tr><th>Celsius</th><th>Fahrenheit</th><th></th><th>Fahrenheit</th><th>Celsius</th></tr>";
+        let celsius;
+        let fahrenheit;
+        let i;
+
+        const ctof = function() {
+            fahrenheit = i * 1.8 + 32;
+            return fahrenheit;
+        };
+
+        const ftoc = function() {
+            celsius = (Math.floor(fahrenheit) - 32) / 1.8;
+            return celsius;
+        };
+
+
+
+        for (i = -80; i <= 80; i++) {
+            /*
+            makeTabel.innerHTML += "<tr><td>" + i + "</td><td>" + ctof().toFixed(1) + "</td><td></td><td>" +
+                Math.floor(ctof()) + "</td><td>" + ftoc().toFixed(1) + "</td></tr>";
+            */
+            makeTabel.innerHTML += "<tr><td>" + i + "</td><td>" + ctof().toFixed(1) + "</td><td></td><td>" +
+                ftoc().toFixed(1) + "</td><td>" + ctof().toFixed(1) + "</td></tr>";
+        }
+
+    </script>
+
+</body>
+</html>
